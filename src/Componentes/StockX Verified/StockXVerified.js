@@ -1,6 +1,5 @@
 import React from "react";
 import "./StockXVerified.css"; // Ensure this CSS file has the styling code
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function StockXVerified() {
   return (
