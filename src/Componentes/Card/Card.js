@@ -3,7 +3,7 @@ import "./Card.css";
 import { images } from "../../Image/Allimage";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { addData } from "../Reducer/Reducer";
+import { addData } from "../Reducer/reducer";
 import { NavLink } from "react-router-dom";
 
 function Card(props) {

@@ -26,7 +26,7 @@ function Cardpass() {
 
   return (
     <div className=" container">
-        <h5 className="ms-3">
+        <h5 className="ms-1">
         Recent Viewed  <i className="fa-regular fa-circle-question "></i>
       </h5>
       <div className="scroll-container">
@@ -68,6 +68,7 @@ function Cardpass() {
           <p>No items in cart</p>
         )}
       </div>
+    
     </div>
   );
 }

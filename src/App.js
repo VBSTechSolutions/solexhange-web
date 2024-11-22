@@ -7,7 +7,6 @@ import Helppage from './Mainpages/Helppage'
 import SingUpFrom from '../src/Componentes/SignUpForm/SignUpForm'
 import Cartadd from './Componentes/Cart2/Cartadd'
 import Login from './Componentes/Login/Login'
-import Products from './Componentes/Product/Product'
 
 function App() {
   return (
@@ -31,7 +30,7 @@ function App() {
        
           </Route>
         </Routes>
-        <Products/>
+        {/* <Products/> */}
       </div>
       
       

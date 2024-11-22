@@ -40,71 +40,72 @@ function Footer() {
       {/* Conditionally render based on screen size */}
       {isLargeScreen ? (
         <div className="container-xl mt-4 footer2">
+          <h2 className="pt-5">StockX. Access the Now.</h2>
           <div className="row py-4 ">
-            <h2>StockX. Access the Now.</h2>
+            
             <div className="col-lg-2 col-md-2">
               <h6>About</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">How It Works</li>
-                <li className="text-decoration-none">Verification</li>
-                <li className="text-decoration-none">Newsroom</li>
-                <li className="text-decoration-none">Company</li>
-                <li className="text-decoration-none">Careers</li>
-                <li className="text-decoration-none">CStockX Reviews</li>
-                <li className="text-decoration-none">CGive $10, Get $10</li>
+                <li className="text-decoration-none line-gap">How It Works</li>
+                <li className="text-decoration-none line-gap">Verification</li>
+                <li className="text-decoration-none line-gap">Newsroom</li>
+                <li className="text-decoration-none line-gap">Company</li>
+                <li className="text-decoration-none line-gap">Careers</li>
+                <li className="text-decoration-none line-gap">CStockX Reviews</li>
+                <li className="text-decoration-none line-gap">CGive $10, Get $10</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Help</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">Help Center</li>
-                <li className="text-decoration-none">Contact Us</li>
-                <li className="text-decoration-none">Product Suggestions</li>
-                <li className="text-decoration-none">Size Guide</li>
+                <li className="text-decoration-none line-gap">Help Center</li>
+                <li className="text-decoration-none line-gap">Contact Us</li>
+                <li className="text-decoration-none line-gap">Product Suggestions</li>
+                <li className="text-decoration-none line-gap">Size Guide</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Sell</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">Selling Guide</li>
-                <li className="text-decoration-none">Professional Tools</li>
-                <li className="text-decoration-none">StockX Pro</li>
-                <li className="text-decoration-none">Developers</li>
+                <li className="text-decoration-none line-gap">Selling Guide</li>
+                <li className="text-decoration-none line-gap">Professional Tools</li>
+                <li className="text-decoration-none line-gap">StockX Pro</li>
+                <li className="text-decoration-none line-gap">Developers</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Air Jordan</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">Air Jordan 1</li>
-                <li className="text-decoration-none">Air Jordan 3</li>
-                <li className="text-decoration-none">Air Jordan 4</li>
-                <li className="text-decoration-none">Air Jordan 11</li>
-                <li className="text-decoration-none">Women's Jordan Shoes</li>
-                <li className="text-decoration-none">Air Jordan 5</li>
+                <li className="text-decoration-none line-gap">Air Jordan 1</li>
+                <li className="text-decoration-none line-gap">Air Jordan 3</li>
+                <li className="text-decoration-none line-gap">Air Jordan 4</li>
+                <li className="text-decoration-none line-gap">Air Jordan 11</li>
+                <li className="text-decoration-none line-gap">Women's Jordan Shoes</li>
+                <li className="text-decoration-none line-gap">Air Jordan 5</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Adidas</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">Adidas Samba</li>
-                <li className="text-decoration-none">Adidas Gazelle</li>
-                <li className="text-decoration-none">Nike Dunk</li>
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">Adidas Samba</li>
+                <li className="text-decoration-none line-gap">Adidas Gazelle</li>
+                <li className="text-decoration-none line-gap">Nike Dunk</li>
+                <li className="text-decoration-none line-gap">
                   Adidas Handball Spezial
                 </li>
-                <li className="text-decoration-none">Adidas AE</li>
-                <li className="text-decoration-none">Adidas Yeezy</li>
+                <li className="text-decoration-none line-gap">Adidas AE</li>
+                <li className="text-decoration-none line-gap">Adidas Yeezy</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>New Balance</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">New Balance 2002R</li>
-                <li className="text-decoration-none">Sew Balance 1906R</li>
-                <li className="text-decoration-none">New Balance 530</li>
-                <li className="text-decoration-none">New Balance 550</li>
-                <li className="text-decoration-none">New Balance 9060</li>
-                <li className="text-decoration-none">New Balance 990 V1</li>
+                <li className="text-decoration-none line-gap">New Balance 2002R</li>
+                <li className="text-decoration-none line-gap">Sew Balance 1906R</li>
+                <li className="text-decoration-none line-gap">New Balance 530</li>
+                <li className="text-decoration-none line-gap">New Balance 550</li>
+                <li className="text-decoration-none line-gap">New Balance 9060</li>
+                <li className="text-decoration-none line-gap">New Balance 990 V1</li>
               </ul>
             </div>
           </div>
@@ -112,38 +113,38 @@ function Footer() {
             <div className="col-lg-2 col-md-2">
               <h6>Performance running</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none text-nowrap">
+                <li className="text-decoration-none line-gap text-nowrap">
                   Nike Air Zoom Alphafly Next %
                 </li>
-                <li className="text-decoration-none">Nike ZoomX Invincible </li>
-                <li className="text-decoration-none">Nike Pegasus 40</li>
-                <li className="text-decoration-none">Nike Pegasus 41</li>
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">Nike ZoomX Invincible </li>
+                <li className="text-decoration-none line-gap">Nike Pegasus 40</li>
+                <li className="text-decoration-none line-gap">Nike Pegasus 41</li>
+                <li className="text-decoration-none line-gap">
                   Nike ZoomX Vaporfly Next%
                 </li>
-                <li className="text-decoration-none">On Cloudmonster</li>
+                <li className="text-decoration-none line-gap">On Cloudmonster</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Popular Releases</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">
                   AJ1 Retro Low OG SP Travis Scott Canary (Women's)
                 </li>
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">
                   Jordan 4 Retro White Thunder
                 </li>
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">
                   Jordan 4 Retro SE Paris Olympics Wet Cement
                 </li>
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">
                   adidas Yeezy Slide Slate Grey
                 </li>
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">
                   ASICS Gel-1130 White Clay Canyon
                 </li>
 
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">
                   Nike Kobe Mamba Mentality Jersey
                 </li>
               </ul>
@@ -151,13 +152,13 @@ function Footer() {
             <div className="col-lg-2 col-md-2">
               <h6>Apparel</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">Denim Tears</li>
-                <li className="text-decoration-none">Fear of God Essentials</li>
-                <li className="text-decoration-none">Nike Apparel</li>
-                <li className="text-decoration-none">Supreme</li>
-                <li className="text-decoration-none">Travis Scott</li>
+                <li className="text-decoration-none line-gap">Denim Tears</li>
+                <li className="text-decoration-none line-gap">Fear of God Essentials</li>
+                <li className="text-decoration-none line-gap">Nike Apparel</li>
+                <li className="text-decoration-none line-gap">Supreme</li>
+                <li className="text-decoration-none line-gap">Travis Scott</li>
 
-                <li className="text-decoration-none">Yeezy</li>
+                <li className="text-decoration-none line-gap">Yeezy</li>
               </ul>
             </div>
 
@@ -166,14 +167,14 @@ function Footer() {
             <div className="col-lg-2 col-md-2">
               <h6>Accessories</h6>
               <ul className="list-unstyled">
-                <li className="text-decoration-none">Swatch X Omega</li>
-                <li className="text-decoration-none">Stanley</li>
-                <li className="text-decoration-none">Designer Sunglasses</li>
-                <li className="text-decoration-none">
+                <li className="text-decoration-none line-gap">Swatch X Omega</li>
+                <li className="text-decoration-none line-gap">Stanley</li>
+                <li className="text-decoration-none line-gap">Designer Sunglasses</li>
+                <li className="text-decoration-none line-gap">
                   Louis Vuitton Accessories
                 </li>
-                <li className="text-decoration-none">Gucci Accessories</li>
-                <li className="text-decoration-none">Supreme Accessories</li>
+                <li className="text-decoration-none line-gap">Gucci Accessories</li>
+                <li className="text-decoration-none line-gap">Supreme Accessories</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
@@ -304,7 +305,7 @@ function Footer() {
 
                 <div
                   href="#settings"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("settings")}
                 >
                   <h6>About</h6>
@@ -316,20 +317,20 @@ function Footer() {
                 </div>
                 {openSubMenus.settings && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">How It Works</li>
-                    <li className="text-decoration-none">Verification</li>
-                    <li className="text-decoration-none">Newsroom</li>
-                    <li className="text-decoration-none">Company</li>
-                    <li className="text-decoration-none">Careers</li>
-                    <li className="text-decoration-none">CStockX Reviews</li>
-                    <li className="text-decoration-none">CGive $10, Get $10</li>
+                    <li className="text-decoration-none line-gap">How It Works</li>
+                    <li className="text-decoration-none line-gap">Verification</li>
+                    <li className="text-decoration-none line-gap">Newsroom</li>
+                    <li className="text-decoration-none line-gap">Company</li>
+                    <li className="text-decoration-none line-gap">Careers</li>
+                    <li className="text-decoration-none line-gap">CStockX Reviews</li>
+                    <li className="text-decoration-none line-gap">CGive $10, Get $10</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#help"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("help")}
                 >
                   <h6>Help</h6>
@@ -341,19 +342,19 @@ function Footer() {
                 </div>
                 {openSubMenus.help && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">Help Center</li>
-                    <li className="text-decoration-none">Contact Us</li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">Help Center</li>
+                    <li className="text-decoration-none line-gap">Contact Us</li>
+                    <li className="text-decoration-none line-gap">
                       Product Suggestions
                     </li>
-                    <li className="text-decoration-none">Size Guide</li>
+                    <li className="text-decoration-none line-gap">Size Guide</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#Sell"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("Sell")}
                 >
                   <h6>Sell</h6>
@@ -365,17 +366,17 @@ function Footer() {
                 </div>
                 {openSubMenus.Sell && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">Selling Guide</li>
-                    <li className="text-decoration-none">Professional Tools</li>
-                    <li className="text-decoration-none">StockX Pro</li>
-                    <li className="text-decoration-none">Developers</li>
+                    <li className="text-decoration-none line-gap">Selling Guide</li>
+                    <li className="text-decoration-none line-gap">Professional Tools</li>
+                    <li className="text-decoration-none line-gap">StockX Pro</li>
+                    <li className="text-decoration-none line-gap">Developers</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#AirJordan"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("AirJordan")}
                 >
                   <h6>Air Jordan</h6>
@@ -387,21 +388,21 @@ function Footer() {
                 </div>
                 {openSubMenus.AirJordan && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">Air Jordan 1</li>
-                    <li className="text-decoration-none">Air Jordan 3</li>
-                    <li className="text-decoration-none">Air Jordan 4</li>
-                    <li className="text-decoration-none">Air Jordan 11</li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">Air Jordan 1</li>
+                    <li className="text-decoration-none line-gap">Air Jordan 3</li>
+                    <li className="text-decoration-none line-gap">Air Jordan 4</li>
+                    <li className="text-decoration-none line-gap">Air Jordan 11</li>
+                    <li className="text-decoration-none line-gap">
                       Women's Jordan Shoes
                     </li>
-                    <li className="text-decoration-none">Air Jordan 5</li>
+                    <li className="text-decoration-none line-gap">Air Jordan 5</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#Adidas"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("Adidas")}
                 >
                   <h6>Adidas</h6>
@@ -413,21 +414,21 @@ function Footer() {
                 </div>
                 {openSubMenus.Adidas && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">Adidas Samba</li>
-                    <li className="text-decoration-none">Adidas Gazelle</li>
-                    <li className="text-decoration-none">Nike Dunk</li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">Adidas Samba</li>
+                    <li className="text-decoration-none line-gap">Adidas Gazelle</li>
+                    <li className="text-decoration-none line-gap">Nike Dunk</li>
+                    <li className="text-decoration-none line-gap">
                       Adidas Handball Spezial
                     </li>
-                    <li className="text-decoration-none">Adidas AE</li>
-                    <li className="text-decoration-none">Adidas Yeezy</li>
+                    <li className="text-decoration-none line-gap">Adidas AE</li>
+                    <li className="text-decoration-none line-gap">Adidas Yeezy</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#NewBalance"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("NewBalance")}
                 >
                   <h6>New Balance</h6>
@@ -439,19 +440,19 @@ function Footer() {
                 </div>
                 {openSubMenus.NewBalance && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">New Balance 2002R</li>
-                    <li className="text-decoration-none">Sew Balance 1906R</li>
-                    <li className="text-decoration-none">New Balance 530</li>
-                    <li className="text-decoration-none">New Balance 550</li>
-                    <li className="text-decoration-none">New Balance 9060</li>
-                    <li className="text-decoration-none">New Balance 990 V1</li>
+                    <li className="text-decoration-none line-gap">New Balance 2002R</li>
+                    <li className="text-decoration-none line-gap">Sew Balance 1906R</li>
+                    <li className="text-decoration-none line-gap">New Balance 530</li>
+                    <li className="text-decoration-none line-gap">New Balance 550</li>
+                    <li className="text-decoration-none line-gap">New Balance 9060</li>
+                    <li className="text-decoration-none line-gap">New Balance 990 V1</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#Nike"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("Nike")}
                 >
                   <h6>Nike</h6>
@@ -463,19 +464,19 @@ function Footer() {
                 </div>
                 {openSubMenus.Nike && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">Nike Air Force 1</li>
-                    <li className="text-decoration-none">Nike Air Max 1</li>
-                    <li className="text-decoration-none">Nike Dunk</li>
-                    <li className="text-decoration-none">Nike SB</li>
-                    <li className="text-decoration-none">Women's Nike Dunks</li>
-                    <li className="text-decoration-none">Nike Vomero 5</li>
+                    <li className="text-decoration-none line-gap">Nike Air Force 1</li>
+                    <li className="text-decoration-none line-gap">Nike Air Max 1</li>
+                    <li className="text-decoration-none line-gap">Nike Dunk</li>
+                    <li className="text-decoration-none line-gap">Nike SB</li>
+                    <li className="text-decoration-none line-gap">Women's Nike Dunks</li>
+                    <li className="text-decoration-none line-gap">Nike Vomero 5</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#Performance"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("Performance")}
                 >
                   <h6>Performance running</h6>
@@ -487,25 +488,25 @@ function Footer() {
                 </div>
                 {openSubMenus.Performance && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       Nike Air Zoom Alphafly Next %
                     </li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       Nike ZoomX Invincible{" "}
                     </li>
-                    <li className="text-decoration-none">Nike Pegasus 40</li>
-                    <li className="text-decoration-none">Nike Pegasus 41</li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">Nike Pegasus 40</li>
+                    <li className="text-decoration-none line-gap">Nike Pegasus 41</li>
+                    <li className="text-decoration-none line-gap">
                       Nike ZoomX Vaporfly Next%
                     </li>
-                    <li className="text-decoration-none">On Cloudmonster</li>
+                    <li className="text-decoration-none line-gap">On Cloudmonster</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#Popular"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("Popular")}
                 >
                   <h6>Popular Releases</h6>
@@ -517,23 +518,23 @@ function Footer() {
                 </div>
                 {openSubMenus.Popular && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       AJ1 Retro Low OG SP Travis Scott Canary (Women's)
                     </li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       Jordan 4 Retro White Thunder
                     </li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       Jordan 4 Retro SE Paris Olympics Wet Cement
                     </li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       adidas Yeezy Slide Slate Grey
                     </li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       ASICS Gel-1130 White Clay Canyon
                     </li>
 
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       Nike Kobe Mamba Mentality Jersey
                     </li>
                   </ul>
@@ -542,7 +543,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Apparel"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("Apparel")}
                 >
                   <h6>Apparel</h6>
@@ -554,22 +555,22 @@ function Footer() {
                 </div>
                 {openSubMenus.Apparel && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">Denim Tears</li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">Denim Tears</li>
+                    <li className="text-decoration-none line-gap">
                       Fear of God Essentials
                     </li>
-                    <li className="text-decoration-none">Nike Apparel</li>
-                    <li className="text-decoration-none">Supreme</li>
-                    <li className="text-decoration-none">Travis Scott</li>
+                    <li className="text-decoration-none line-gap">Nike Apparel</li>
+                    <li className="text-decoration-none line-gap">Supreme</li>
+                    <li className="text-decoration-none line-gap">Travis Scott</li>
 
-                    <li className="text-decoration-none">Yeezy</li>
+                    <li className="text-decoration-none line-gap">Yeezy</li>
                   </ul>
                 )}
               </div>
               <div className="">
                 <div
                   href="#Accessories"
-                  className="d-flex justify-content-between text-decoration-none"
+                  className="d-flex justify-content-between text-decoration-none line-gap"
                   onClick={() => toggleSubMenu("Accessories")}
                 >
                   <h6>Accessories</h6>
@@ -581,16 +582,16 @@ function Footer() {
                 </div>
                 {openSubMenus.Accessories && (
                   <ul className="list-unstyled">
-                    <li className="text-decoration-none">Swatch X Omega</li>
-                    <li className="text-decoration-none">Stanley</li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">Swatch X Omega</li>
+                    <li className="text-decoration-none line-gap">Stanley</li>
+                    <li className="text-decoration-none line-gap">
                       Designer Sunglasses
                     </li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">
                       Louis Vuitton Accessories
                     </li>
-                    <li className="text-decoration-none">Gucci Accessories</li>
-                    <li className="text-decoration-none">
+                    <li className="text-decoration-none line-gap">Gucci Accessories</li>
+                    <li className="text-decoration-none line-gap">
                       Supreme Accessories
                     </li>
                   </ul>

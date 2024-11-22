@@ -27,3 +27,6 @@ li{
     display: grid;
     justify-content: center;
 }
+.line-gap{
+    margin-top: 10px;
+}
