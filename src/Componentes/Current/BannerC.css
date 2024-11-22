@@ -1,0 +1,65 @@
+.headline--1{
+  font-family: auto;
+ 
+  line-height: clamp(2rem, 2.5vw, 4rem); 
+ 
+  font-weight:  500; 
+  font-size: clamp(3rem, 2.5vw, 4rem); 
+}
+.btn-lg{
+    background-color: #006340;
+    border-radius: 0px;
+    width: 80%;
+    color: white;
+    font-weight: 600;
+}
+.backgroundblack{
+    background-color: black;
+}
+@media (max-width : 988px) {
+    .griddisplay{
+        display: grid;
+    }
+    .btn-lg{
+        width: 80% !important;
+    }
+    .mrf{
+        margin-left: 40px;
+    }
+    .tow{
+        width: 80% !important;
+        position: relative;
+        right: 0px !important;
+    }
+    #one{
+        width: 100%;
+    }
+    .paddeing{
+        padding: 0px !important;
+        width: 100%;
+    }
+    .verifiv{
+        padding: 0px !important;
+        /* margin-right: 0.8rem !important; */
+    }
+}
+
+#one{
+    background-image: url('../../Image/triangle-graph.png');
+   height: fit-content;
+    background-color: black;
+    position: relative;
+    background-size: cover;
+}
+.backgroundcolor{
+    background-color: black;
+
+}
+.tow{
+    width: 100%;
+    position: relative;
+    right: 115px;
+    
+}
+
+

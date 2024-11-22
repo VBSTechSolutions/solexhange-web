@@ -1,0 +1,13 @@
+form{
+    display: grid;
+    gap: 10px;
+}
+.form-text{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: black;
+}
+.form-check-label{
+font-size: small;
+font-weight: 600;
+}

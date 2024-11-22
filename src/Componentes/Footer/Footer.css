@@ -1,0 +1,29 @@
+.list-unstyled{
+    font-size: 12px;
+    font-weight: 500;
+}
+.dropup{
+    width: 100%;
+}
+.dropup .dropdown-toggle::after{
+    display: none;
+}
+.container-xxl{
+    background-color: rgba(0, 0, 0, 0.913);
+    color: white;
+}
+li{
+    gap: 10px;
+  }
+.text-decoration{
+    gap: 10px;
+}
+.google{
+    height: auto;
+    width: 10rem;
+    background-color: transparent;
+}
+.grid{
+    display: grid;
+    justify-content: center;
+}

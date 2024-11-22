@@ -1,0 +1,126 @@
+.img-card{
+    object-fit: scale-down;
+}
+.card-text{
+    color: rgb(128 128 128 / 81%);
+    font-size: small;
+}
+ .card-title{
+    font-size: 13px;
+    font-weight: 400;
+    white-space: normal;
+}
+.card-title-addcart{
+    font-size: clamp(1rem , 2vw , 2rem);
+    font-weight: 600;
+    font-family: auto;
+    white-space: normal;
+}
+.price{
+    font-weight: 600;
+    position: relative;
+    ; 
+}
+.fa-regular{
+    padding-right: 10px;
+}
+.btn-btn{
+    background-color:gainsboro;
+    color: black;
+    text-decoration: none;
+    position: relative;
+  padding: 3px ;
+     font-weight: 400;
+    font-size: small;
+    width: fit-content;
+}
+
+.cards{
+text-decoration: none;
+}
+.scroll-container {
+    display: flex;
+    gap: 0px !important;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+
+  }
+  
+  .cards {
+    display: inline-block; /* Keeps each card inline for horizontal scrolling */
+    width: 11rem; /* Adjust card width as needed */
+     /* Adds space between cards */
+    border: none;
+  }
+  .card-body{
+    display: grid;
+    gap: 5px;
+  }
+ .colortext{
+    color: black !important;
+ }
+ a{
+    color: black !important;
+ }
+ .aligriteam{
+  align-items: center;
+ }
+ .btncolor{
+  background:rgb(0, 100, 57);
+  opacity: 1;
+  color: white;
+  border-radius: 2rem;
+  font-size: large;
+  font-weight: 600;
+  
+ }
+ .underlinees{
+  color:rgb(0, 100, 57);
+
+ }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .card-title-addcart {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* .img-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  } */
+  
+  .price-section {
+    text-align: left;
+  }
+  
+  .price {
+    font-size: 1.25rem;
+  
+    font-weight: bold;
+  }
+  
+  .last-sale {
+    font-size: 1rem;
+    color: #999;
+  }
+  
+  button {
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  

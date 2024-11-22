@@ -1,0 +1,21 @@
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap; /* Ensure the items are displayed horizontally */
+    padding: 10px 0; /* Optional: Add padding for spacing */
+  }
+  
+  .cards-wrapper {
+    display: flex; /* Align items horizontally */
+    gap: 10px; /* Optional: Add space between cards */
+  }
+  
+  .card-item {
+    display: inline-block; /* Ensures each card is inline */
+    text-align: center;
+  }
+  
+  .img-card {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+ 

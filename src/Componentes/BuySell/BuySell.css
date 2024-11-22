@@ -1,0 +1,104 @@
+.buy{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+.min{
+    font-size: x-large;
+    font-weight: 700;
+}
+.onetow{
+    font-size: x-large;
+    font-weight: 700;
+    border: 1px solid;
+    padding: 3px 8px 3px 8px;
+    border-radius: 50%;
+}
+.bg-dark{
+    background-color: black !important;
+}
+.drak{
+    background-color: black;
+    color:white;
+}
+.white{
+    background-color: #dcdcdc00;
+}
+/* body {
+    background-color: #000000;
+    --color-text: #a5a5a5;
+    --color-bg: #000000;
+    --color-link: #ea34a6;
+    --color-link-hover: #fff;
+    --color-font-circle: #7b7772;
+    --color-button: #ea34a6;
+    --color-text-button: #000000;
+    --color-text-circle-1: #ea34a6;
+    --color-text-circle-2: #422163;
+    --color-text-circle-3: #212044;
+    --color-text-circle-4: #292725;
+    --font-circle-1: niagara, serif;
+    --font-weight-circle-1: 300;
+    --font-circle-2: ambroise-firmin-std, serif;
+    --font-weight-circle-2: 300;
+    --font-circle-3: modesto-condensed, serif;
+    --font-weight-circle-3: 400;
+    --font-circle-4: niagara, serif;
+    --font-weight-circle-4: 300;
+  } */
+  
+  .circles {
+    pointer-events: none;
+    /* position: fixed; */
+    --dim: 50vmin;
+    width: var(--dim);
+    height: var(--dim);
+    top: 0;
+  
+  }
+  .allarecenter{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .demo-3 .circles {
+    --dim: 156vmin;
+  }
+  .greencolor{
+    color:rgba(0, 128, 0, 0.769) !important;
+  }
+  .circles__text {
+    text-transform: uppercase;
+    transform-origin: 700px 700px;
+    will-change: transform, opacity;
+  }
+  
+  .circles__text--1 {
+    font-size: 110px;
+    font-family: var(--font-circle-1);
+    font-weight: var(--font-weight-circle-1);
+    fill: var(--color-text-circle-1);
+    letter-spacing: 10px;
+  }
+  
+  
+  .circles__text{
+    display: flex;
+    justify-content: center;
+  }
+
+  .postionarea{
+    position: relative;
+    bottom: 110px;
+z-index: -1;
+  }
+ 
+  
+  img {
+    cursor: pointer;
+  }
+  .custom-icon {
+    pointer-events: none;
+  }
+  

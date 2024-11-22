@@ -1,0 +1,106 @@
+/* Container for horizontal scrolling */
+.scroll-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scroll */
+  white-space: nowrap; /* Prevents line breaks */
+  padding: 10px 0; /* Padding for spacing */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Adds consistent spacing between items */
+}
+
+/* Style for each category span */
+.scroll-container span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px; /* Adds space between items */
+  padding: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: transform 0.25s ease;
+}
+
+/* Underline animation effect */
+.scroll-container span::after {
+  content: '';
+  border-top: 3px solid #000;
+  width: 100%;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transform: rotateY(90deg); /* Initially hidden */
+  transition: transform 0.25s linear;
+}
+
+.scroll-container span:hover::after {
+  transform: rotateY(0deg); /* Shows underline on hover */
+}
+
+/* Show the dropdown on hover */
+.scroll-container .dropdown-menu {
+  display: none;
+  position: absolute;
+  margin-top: 2.2rem;
+
+  padding: 8px 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  border-radius: 4px;
+ 
+  z-index: 999;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  margin-top: 2.2rem;
+
+  padding: 8px 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  border-radius: 4px;
+  width: -webkit-fill-available;
+  z-index: 999;
+}
+
+.scroll-container span:hover + .dropdown-menu,
+.scroll-container .dropdown-menu:hover {
+  display: block;
+}
+
+/* Optional styling for dropdown items */
+.dropdown-item {
+  padding: 8px 16px;
+  color: #333;
+  
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Make the scroll-container responsive */
+@media (max-width: 768px) {
+  .scroll-container {
+    overflow-x: scroll; /* Ensure horizontal scroll on smaller screens */
+    padding: 10px;
+  }
+
+  .scroll-container span {
+    font-size: 14px; /* Adjust font size for smaller screens */
+     /* Reduce space between items */
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-container span {
+    font-size: 12px; /* Adjust font size for extra small screens */
+  /* Reduce space between items */
+  }
+}

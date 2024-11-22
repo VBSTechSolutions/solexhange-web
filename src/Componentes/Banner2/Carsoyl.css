@@ -1,0 +1,9 @@
+.banner{
+    width: -webkit-fill-available;
+    border-radius: 0.5rem;
+}
+@media  (max-width :768px) {
+    .RightBanner{
+        display: none;
+    }
+}

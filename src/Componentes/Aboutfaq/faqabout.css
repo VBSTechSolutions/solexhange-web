@@ -1,0 +1,62 @@
+.whiteborder {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+   
+  }
+  
+  /* @media  (min-width : 992px) {
+    .widthmeida{
+      width: 31.3%;
+    }
+  }
+  @media  (max-width : 992px) {
+    .widthmeida{
+      width: 48.3%;
+    }
+  } */
+  /* @media  (max-width : 768px) {
+    .widthmeida{
+      width: 100.3%;
+    }
+  } */
+   .widthmeida-div{
+    border: 1px solid white;
+    padding: 20px;
+    height: 100%;
+   }
+   Hover effect for all states
+  .whiteborder:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Optional shadow effect */
+  }
+  
+  /* Hover effect when active */
+
+  
+  .whiteborder.active:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .backcolor {
+    background-color: black;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .gap {
+    justify-content: space-around;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  

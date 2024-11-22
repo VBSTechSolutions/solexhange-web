@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+
+import { Routes , Route } from 'react-router-dom'
+import Landinpage from './Mainpages/Landinpage'
+import Aboutpage from './Mainpages/Aboutpage'
+import Helppage from './Mainpages/Helppage'
+import SingUpFrom from '../src/Componentes/SignUpForm/SignUpForm'
+import Cartadd from './Componentes/Cart2/Cartadd'
+import Login from './Componentes/Login/Login'
+import Products from './Componentes/Product/Product'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+
+
+      <div>
+        {/* <Aboutpage/> */}
+        <Routes>
+        <Route>
+          <Route path='/' element ={<Landinpage/>}/>
+          <Route path='/about' element ={<Aboutpage/>}/>    
+          <Route path='/help' element ={<Helppage/>}/>
+          <Route path='/sing' element ={<SingUpFrom/>}/>        
+          <Route path='/cartadd' element ={<Cartadd/>}/>     
+          <Route path='/SingUpFrom' element ={<SingUpFrom/>}/>  
+          <Route path='/Login' element ={<Login/>}/>  
+
+           
+       
+          </Route>
+        </Routes>
+        <Products/>
+      </div>
+      
+      
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

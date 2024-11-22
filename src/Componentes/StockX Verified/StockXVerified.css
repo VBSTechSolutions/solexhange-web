@@ -1,0 +1,19 @@
+.StockX{
+    width: 90%;
+}
+.css-gjfsj{
+    width: 26px;
+    height: 24px;
+    object-fit: contain;
+   color: white !important;
+}
+.learn-more{
+    color: white;
+}
+.custom-card{
+    background-color: black !important;
+    color: white !important;
+}
+.StockX-text{
+    font-size: clamp(11px ,5vw ,12px);
+}

@@ -1,0 +1,54 @@
+.d-block {
+    border-radius: 1rem;
+
+}
+@media (max-width :500px) {
+    /* .w-100{
+        width: 100% !important;
+    } */
+    .carousel-control-prev{
+        width: 30%;
+
+    }
+    .carousel-control-next{
+        width: 30%;
+
+    }
+    .carousel-control-prev-icon{
+        height: 6px;
+    }
+    .carousel-control-next-icon{
+        height: 6px;
+    }
+    
+}
+@media (min-width :700px) {
+    .slider{
+        height: 300px;
+    }
+}
+
+/* .slider{
+    height: 70%;
+} */
+
+.carousel-control-prev-icon{
+    
+    border-radius: 50%;
+    height: 1rem !important;
+    width: 1rem !important;
+    background-color: black;
+    
+}
+.carousel-control-next-icon{
+    border-radius: 50%;
+    height: 1rem !important;
+    width: 1rem !important;
+}
+.icones{
+    background-color: black;
+border-radius: 50%;
+padding: 5px;
+}
+
+ 

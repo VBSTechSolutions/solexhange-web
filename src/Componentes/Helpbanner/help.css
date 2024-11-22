@@ -1,0 +1,31 @@
+.helpheading{
+    font-size: clamp(1rem, 2.5vw, 2rem); 
+    line-height: 1rem;
+    font-family : auto;
+    font-weight: 700;
+    
+}
+.helpheadinges{
+    font-size: clamp(1rem, 2.5vw, 1.3rem); 
+    /* font-family : auto; */
+    font-weight: 700;
+
+}
+.svgwidtht{
+    height: 100%;
+    width: 100%;
+}
+.heightcol{
+    height: 70vh;
+    align-items: center;
+}
+.seacrhelp{
+    width: 100%;
+    border-radius: 0px !important;
+}
+.iconesearch{
+    position: relative;
+    
+    left: 8%;
+    color: gray;
+}

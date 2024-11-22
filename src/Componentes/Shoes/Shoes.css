@@ -1,0 +1,52 @@
+/* Parent container for the card */
+.shoe-card {
+    position: relative;
+ background-color: black;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+   /* border: 1px solid white; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  .backcolor{
+    background-color: black;
+  }
+  /* Styling the image */
+  .shoe-image {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+  }
+  
+  /* Styling the button */
+  .shoe-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Button hover effect */
+  .shoe-btn:hover {
+   
+    background-color: green;
+    color: white;
+  }
+  
+  /* Button click effect */
+  .shoe-btn.clicked {
+    background-color: red;
+    color: white;
+  }
+  
