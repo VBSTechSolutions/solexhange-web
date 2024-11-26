@@ -89,7 +89,7 @@ function BuySell() {
               </div>
             </div>
             <div>
-              <p className="min">StockX Verification</p>
+              <p className="min">Sole Change Verification</p>
             </div>
             <div>
               <h2>

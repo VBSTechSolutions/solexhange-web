@@ -7,6 +7,7 @@ import Helppage from './Mainpages/Helppage'
 import SingUpFrom from '../src/Componentes/SignUpForm/SignUpForm'
 import Cartadd from './Componentes/Cart2/Cartadd'
 import Login from './Componentes/Login/Login'
+import Search from './Componentes/Search/Search'
 
 function App() {
   return (
@@ -25,12 +26,14 @@ function App() {
           <Route path='/cartadd' element ={<Cartadd/>}/>     
           <Route path='/SingUpFrom' element ={<SingUpFrom/>}/>  
           <Route path='/Login' element ={<Login/>}/>  
+          <Route path='/search' element ={<Search/>}/>  
 
            
        
           </Route>
         </Routes>
         {/* <Products/> */}
+        
       </div>
       
       

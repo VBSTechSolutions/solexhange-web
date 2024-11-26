@@ -10,10 +10,10 @@ function FAQ() {
 
   const questions = [
     "Can I cancel my purchase?",
-    "How do I sell on StockX?",
-    "What is the StockX Buyer Promise?",
-    "What is the StockX Return Policy?",
-    "What is the StockX Seller Program? What are Seller Levels?",
+    "How do I sell on Soleexhange?",
+    "What is the Soleexhange Buyer Promise?",
+    "What is the Soleexhange Return Policy?",
+    "What is the Soleexhange Seller Program? What are Seller Levels?",
     "When can I expect to receive my item?",
   ];
 

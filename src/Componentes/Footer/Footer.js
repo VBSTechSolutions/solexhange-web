@@ -40,24 +40,24 @@ function Footer() {
       {/* Conditionally render based on screen size */}
       {isLargeScreen ? (
         <div className="container-xl mt-4 footer2">
-          <h2 className="pt-5">StockX. Access the Now.</h2>
+          <h2 className="pt-5">Soleexhange. Access the Now.</h2>
           <div className="row py-4 ">
             
             <div className="col-lg-2 col-md-2">
               <h6>About</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">How It Works</li>
                 <li className="text-decoration-none line-gap">Verification</li>
                 <li className="text-decoration-none line-gap">Newsroom</li>
                 <li className="text-decoration-none line-gap">Company</li>
                 <li className="text-decoration-none line-gap">Careers</li>
-                <li className="text-decoration-none line-gap">CStockX Reviews</li>
+                <li className="text-decoration-none line-gap">CSoleexhange Reviews</li>
                 <li className="text-decoration-none line-gap">CGive $10, Get $10</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Help</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">Help Center</li>
                 <li className="text-decoration-none line-gap">Contact Us</li>
                 <li className="text-decoration-none line-gap">Product Suggestions</li>
@@ -66,16 +66,16 @@ function Footer() {
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Sell</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">Selling Guide</li>
                 <li className="text-decoration-none line-gap">Professional Tools</li>
-                <li className="text-decoration-none line-gap">StockX Pro</li>
+                <li className="text-decoration-none line-gap">Soleexhange Pro</li>
                 <li className="text-decoration-none line-gap">Developers</li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Air Jordan</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">Air Jordan 1</li>
                 <li className="text-decoration-none line-gap">Air Jordan 3</li>
                 <li className="text-decoration-none line-gap">Air Jordan 4</li>
@@ -86,7 +86,7 @@ function Footer() {
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Adidas</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">Adidas Samba</li>
                 <li className="text-decoration-none line-gap">Adidas Gazelle</li>
                 <li className="text-decoration-none line-gap">Nike Dunk</li>
@@ -99,7 +99,7 @@ function Footer() {
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>New Balance</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">New Balance 2002R</li>
                 <li className="text-decoration-none line-gap">Sew Balance 1906R</li>
                 <li className="text-decoration-none line-gap">New Balance 530</li>
@@ -112,7 +112,7 @@ function Footer() {
           <div className="row">
             <div className="col-lg-2 col-md-2">
               <h6>Performance running</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap text-nowrap">
                   Nike Air Zoom Alphafly Next %
                 </li>
@@ -127,7 +127,7 @@ function Footer() {
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Popular Releases</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">
                   AJ1 Retro Low OG SP Travis Scott Canary (Women's)
                 </li>
@@ -151,7 +151,7 @@ function Footer() {
             </div>
             <div className="col-lg-2 col-md-2">
               <h6>Apparel</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">Denim Tears</li>
                 <li className="text-decoration-none line-gap">Fear of God Essentials</li>
                 <li className="text-decoration-none line-gap">Nike Apparel</li>
@@ -166,7 +166,7 @@ function Footer() {
 
             <div className="col-lg-2 col-md-2">
               <h6>Accessories</h6>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled p-2">
                 <li className="text-decoration-none line-gap">Swatch X Omega</li>
                 <li className="text-decoration-none line-gap">Stanley</li>
                 <li className="text-decoration-none line-gap">Designer Sunglasses</li>
@@ -300,12 +300,12 @@ function Footer() {
         <div className="any footer1">
           <div className="sub-menu">
             <div>
-              <div className="pt-3">
-                <h2>StockX. Access the Now.</h2>
+              <div className="pt-3 ps-2">
+                <h2>Soleexhange. Access the Now.</h2>
 
                 <div
                   href="#settings"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("settings")}
                 >
                   <h6>About</h6>
@@ -316,13 +316,13 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.settings && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">How It Works</li>
                     <li className="text-decoration-none line-gap">Verification</li>
                     <li className="text-decoration-none line-gap">Newsroom</li>
                     <li className="text-decoration-none line-gap">Company</li>
                     <li className="text-decoration-none line-gap">Careers</li>
-                    <li className="text-decoration-none line-gap">CStockX Reviews</li>
+                    <li className="text-decoration-none line-gap">CSoleexhange Reviews</li>
                     <li className="text-decoration-none line-gap">CGive $10, Get $10</li>
                   </ul>
                 )}
@@ -330,7 +330,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#help"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("help")}
                 >
                   <h6>Help</h6>
@@ -341,7 +341,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.help && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">Help Center</li>
                     <li className="text-decoration-none line-gap">Contact Us</li>
                     <li className="text-decoration-none line-gap">
@@ -354,7 +354,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Sell"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("Sell")}
                 >
                   <h6>Sell</h6>
@@ -365,10 +365,10 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.Sell && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">Selling Guide</li>
                     <li className="text-decoration-none line-gap">Professional Tools</li>
-                    <li className="text-decoration-none line-gap">StockX Pro</li>
+                    <li className="text-decoration-none line-gap">Soleexhange Pro</li>
                     <li className="text-decoration-none line-gap">Developers</li>
                   </ul>
                 )}
@@ -376,7 +376,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#AirJordan"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("AirJordan")}
                 >
                   <h6>Air Jordan</h6>
@@ -387,7 +387,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.AirJordan && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">Air Jordan 1</li>
                     <li className="text-decoration-none line-gap">Air Jordan 3</li>
                     <li className="text-decoration-none line-gap">Air Jordan 4</li>
@@ -402,7 +402,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Adidas"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("Adidas")}
                 >
                   <h6>Adidas</h6>
@@ -413,7 +413,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.Adidas && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">Adidas Samba</li>
                     <li className="text-decoration-none line-gap">Adidas Gazelle</li>
                     <li className="text-decoration-none line-gap">Nike Dunk</li>
@@ -428,7 +428,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#NewBalance"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("NewBalance")}
                 >
                   <h6>New Balance</h6>
@@ -439,7 +439,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.NewBalance && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">New Balance 2002R</li>
                     <li className="text-decoration-none line-gap">Sew Balance 1906R</li>
                     <li className="text-decoration-none line-gap">New Balance 530</li>
@@ -452,7 +452,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Nike"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("Nike")}
                 >
                   <h6>Nike</h6>
@@ -463,7 +463,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.Nike && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">Nike Air Force 1</li>
                     <li className="text-decoration-none line-gap">Nike Air Max 1</li>
                     <li className="text-decoration-none line-gap">Nike Dunk</li>
@@ -476,7 +476,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Performance"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("Performance")}
                 >
                   <h6>Performance running</h6>
@@ -487,7 +487,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.Performance && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">
                       Nike Air Zoom Alphafly Next %
                     </li>
@@ -506,7 +506,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Popular"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("Popular")}
                 >
                   <h6>Popular Releases</h6>
@@ -517,7 +517,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.Popular && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">
                       AJ1 Retro Low OG SP Travis Scott Canary (Women's)
                     </li>
@@ -543,7 +543,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Apparel"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("Apparel")}
                 >
                   <h6>Apparel</h6>
@@ -554,7 +554,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.Apparel && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">Denim Tears</li>
                     <li className="text-decoration-none line-gap">
                       Fear of God Essentials
@@ -570,7 +570,7 @@ function Footer() {
               <div className="">
                 <div
                   href="#Accessories"
-                  className="d-flex justify-content-between text-decoration-none line-gap"
+                  className="d-flex justify-content-between text-decoration-none line-gap p-2"
                   onClick={() => toggleSubMenu("Accessories")}
                 >
                   <h6>Accessories</h6>
@@ -581,7 +581,7 @@ function Footer() {
                   ></div>
                 </div>
                 {openSubMenus.Accessories && (
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled p-2">
                     <li className="text-decoration-none line-gap">Swatch X Omega</li>
                     <li className="text-decoration-none line-gap">Stanley</li>
                     <li className="text-decoration-none line-gap">

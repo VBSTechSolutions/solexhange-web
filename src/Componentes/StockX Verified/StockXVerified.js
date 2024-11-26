@@ -24,10 +24,10 @@ function StockXVerified() {
                     fill="currentColor"
                   ></path>
                 </svg>
-                <div className="StockX">
-                  <h5 className="card-title">StockX Verified</h5>
-                  <p className="StockX-text">
-                    StockX Verified is our own designation means we
+                <div className="Soleexhange">
+                  <h5 className="card-title">Soleexhange Verified</h5>
+                  <p className="Soleexhange-text">
+                    Soleexhange Verified is our own designation means we
                     inspect every item, every time.
                   </p>
                   <a href="#" className="learn-more">
@@ -58,10 +58,10 @@ function StockXVerified() {
                     fill="currentColor"
                   ></path>
                 </svg>
-                <div className="StockX">
+                <div className="Soleexhange">
                   {" "}
                   <h5 className="card-title">Our Promise</h5>
-                  <p className="StockX-text">
+                  <p className="Soleexhange-text">
                     We strive to earn and keep your trust. If we make a mistake,
                     we'll make it right.
                   </p>
@@ -117,11 +117,11 @@ function StockXVerified() {
                     fill="currentColor"
                   ></path>
                 </svg>
-                <div className="StockX">
+                <div className="Soleexhange">
                   {" "}
                   <h5 className="card-title">Start Selling ASAP</h5>
-                  <p className="StockX-text">
-                    You can start selling on StockX in just a few clicks, no
+                  <p className="Soleexhange-text">
+                    You can start selling on Soleexhange in just a few clicks, no
                     application process necessary.
                   </p>
                   <a href="#" className="learn-more">

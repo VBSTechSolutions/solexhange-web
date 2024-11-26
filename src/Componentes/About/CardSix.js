@@ -16,7 +16,7 @@ function CardSix() {
               className="custom-icon img-fluid"
             /></div>
            
-            <h3 className="mt-3 text-center">StockX Verified</h3>
+            <h3 className="mt-3 text-center">Sole Change Verified</h3>
             <p className="Six text-center">
               Every item sold goes through our proprietary multi-step
               verification process with our team of verification experts.

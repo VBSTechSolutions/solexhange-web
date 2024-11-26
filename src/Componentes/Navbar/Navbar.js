@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import { images } from "../../Image/Allimage";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpens, setIsOpens] = useState(false);
@@ -28,6 +28,15 @@ function Navbar() {
   // };
   
   // Update the screen size on resize
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission
+    if (searchQuery.trim()) {
+      navigate(`/search`, { state: { query: searchQuery } }); // Navigate with search query
+    }
+  };
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 992); // Adjust threshold based on your design needs
@@ -82,8 +91,14 @@ axios
         <div className="search-container-custom">
           {/* Input Box */}
           <div className={`input-box-custom ${isOpens ? "open" : ""}`}>
-            <input type="text" placeholder="Search..." />
-            <span className="search-custom" onClick={handleSearchClick}>
+          <input
+        className="form-control ps-5"
+        type="search"
+        placeholder="Search for brand, color, etc."
+        aria-label="Search"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />            <span className="search-custom" onClick={handleSearchClick}>
               <i className="fa-solid fa-magnifying-glass"></i>
             </span>
             {/* Close icon */}

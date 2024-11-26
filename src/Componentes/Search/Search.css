@@ -1,0 +1,11 @@
+.card img {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .badge {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+  

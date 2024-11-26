@@ -37,7 +37,7 @@ function Help() {
               </svg>
             </div>
 
-            <h3 className="mt-3 text-center">Buying on StockX</h3>
+            <h3 className="mt-3 text-center">Buying on Soleexhange</h3>
             <p className="Six text-center">
               Bids, Buy Now, how to pay and deliveries
             </p>
@@ -90,7 +90,7 @@ function Help() {
               </svg>
             </div>
 
-            <h3 className="mt-3 text-center">Selling on StockX</h3>
+            <h3 className="mt-3 text-center">Selling on Soleexhange</h3>
             <p className="Six text-center">
               Asks, Sell Now, shipping, verification and payment info
             </p>
@@ -156,7 +156,7 @@ function Help() {
 
             <h3 className="mt-3 text-center">Verification</h3>
             <p className="Six text-center">
-              Learn how StockX ensures our products are legit{" "}
+              Learn how Soleexhange ensures our products are legit{" "}
             </p>
             <p className="text-center">
               <a href="#" className="text-decoration-none text-success">

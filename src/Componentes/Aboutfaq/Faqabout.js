@@ -10,10 +10,10 @@ function Faqabout() {
 
   const questiones = [
     {
-      question: "How does StockX Work?",
+      question: "How does Sole Change Work?",
       answer: (
         <>
-          StockX is a marketplace where Buyers and Sellers can make anonymous offers on a wide variety of shoes, streetwear, electronics and collectibles. As a live marketplace, StockX empowers Buyers to Bid and Buy at real-time prices that reflect the current demand. This can be done in three easy steps:
+          Sole Change is a marketplace where Buyers and Sellers can make anonymous offers on a wide variety of shoes, streetwear, electronics and collectibles. As a live marketplace, Sole Change empowers Buyers to Bid and Buy at real-time prices that reflect the current demand. This can be done in three easy steps:
           <ul>
             <li>1. Bid or Buy</li>
             <li>2. Authenticate</li>
@@ -23,7 +23,7 @@ function Faqabout() {
       )
     },
     {
-      question: "How does bidding work on StockX?",
+      question: "How does bidding work on Sole Change?",
       answer: ( <>
       <p>Placing a Bid will allow you to set how much you'd like to pay for an item. If you have the highest bid price for an item on the site, it will be up to a Seller to determine if they are interested in meeting you at your offer.</p>
 <p>
@@ -36,7 +36,7 @@ You can also immediately purchases your item from the Seller with the lowest Ask
       (
         <>
         <p>
-            Shoes sold on StockX are considered "deadstock,"  which means that they're verified, new, and unworn at the time of sale. 
+            Shoes sold on Sole Change are considered "deadstock,"  which means that they're verified, new, and unworn at the time of sale. 
 
         </p>
         <p>
@@ -48,7 +48,7 @@ Deadstock sneakers are also sold with the original box including the box lid and
       )
     },
     {
-      question: "How do I pay for an item on StockX?",
+      question: "How do I pay for an item on Sole Change?",
       answer: "Buyers can pay with all major credit cards, PayPal, Apple Pay, Google Pay, Venmo, Alipay, Sofort, or iDEAL payment. The credit cards we accept are Visa, MasterCard, American Express, JCB, UnionPay, and Discover. We accept debit and gift cards with major card brand logos. "
     },
     {

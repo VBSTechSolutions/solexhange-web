@@ -9,7 +9,7 @@ function Banner4() {
         <div class="col-lg-6 heightcol d-flex">
             <div className="ms-auto">
             <p class="helpheading  ">Welcom to the</p>
-            <p class="helpheading ">StockX Help Center</p>
+            <p class="helpheading ">Soleexhange Help Center</p>
             <p class="helpheadinges ">What can we help you with today?</p>
             <p className="d-flex">
               <i className="fa-solid fa-magnifying-glass iconesearch pt-3 ms-3"></i>
