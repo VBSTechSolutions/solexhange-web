@@ -1,0 +1,38 @@
+.newsheading{
+    font-size: clamp(3rem, 5vw, 2.5rem);
+    font-weight: bold;
+    font-family: auto;
+    line-height: 100%;
+
+}
+.newspargarpha{
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    font-weight: 900;
+    font-family: auto;
+    
+
+}
+.news_btn{
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    right: 150px;
+}
+@media (max-width : 992px ) {
+    .news_btn{
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        right: 150px;
+        top: -30px;
+    }
+}
+@media (max-width : 750px ) {
+    .news_btn{
+        justify-content: space-around;
+        align-items: center;
+        position: static;
+      width: 65% !important;
+      font-size: clamp(0.7rem, 4vw, 0.7rem);
+    }
+}

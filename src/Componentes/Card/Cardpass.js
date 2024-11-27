@@ -49,7 +49,7 @@ function Cardpass() {
               />
               <div className="card-body">
                 <h6 className="card-title mt-1 ">{item.name}</h6>
-                <h6 className="card-text mt-1">Lowest Ask</h6>
+                <h6 className="card-text mt-1">Lowest AsK</h6>
                 <h6 className="price">$
                   {item.highest}</h6>
                 <a href="#" className="btn-btn rounded">

@@ -8,6 +8,8 @@ import SingUpFrom from '../src/Componentes/SignUpForm/SignUpForm'
 import Cartadd from './Componentes/Cart2/Cartadd'
 import Login from './Componentes/Login/Login'
 import Search from './Componentes/Search/Search'
+import New from './Componentes/New/New'
+import Newtow from './Componentes/New/Newtow'
 
 function App() {
   return (
@@ -32,7 +34,10 @@ function App() {
        
           </Route>
         </Routes>
+        <New/>
+        <Newtow/>
         {/* <Products/> */}
+        
         
       </div>
       
