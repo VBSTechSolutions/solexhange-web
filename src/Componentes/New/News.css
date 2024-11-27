@@ -36,3 +36,8 @@
       font-size: clamp(0.7rem, 4vw, 0.7rem);
     }
 }
+.new2-imge{
+    position: relative;
+    z-index: 1;
+    max-width: 115%;
+}

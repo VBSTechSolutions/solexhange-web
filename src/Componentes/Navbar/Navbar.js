@@ -253,11 +253,9 @@ axios
 
               {/* Navbar Links */}
               <ul className="navbar-nav ms-auto  gaps align-items-center">
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="#">
-                    News
-                  </NavLink>
-                </li>
+              <NavLink to="/News" className="text-decoration-none text-dark">
+                  <li>News</li>
+                </NavLink>
                 <NavLink className="text-decoration-none text-dark" to="/about">
                   <li>About</li>
                 </NavLink>

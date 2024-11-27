@@ -8,8 +8,8 @@ import SingUpFrom from '../src/Componentes/SignUpForm/SignUpForm'
 import Cartadd from './Componentes/Cart2/Cartadd'
 import Login from './Componentes/Login/Login'
 import Search from './Componentes/Search/Search'
-import New from './Componentes/New/New'
-import Newtow from './Componentes/New/Newtow'
+
+import Newspage from './Mainpages/Newspage'
 
 function App() {
   return (
@@ -29,13 +29,13 @@ function App() {
           <Route path='/SingUpFrom' element ={<SingUpFrom/>}/>  
           <Route path='/Login' element ={<Login/>}/>  
           <Route path='/search' element ={<Search/>}/>  
+          <Route path='/News' element ={<Newspage/>}/>  
 
            
        
           </Route>
         </Routes>
-        <New/>
-        <Newtow/>
+       
         {/* <Products/> */}
         
         

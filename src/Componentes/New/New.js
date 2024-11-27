@@ -15,7 +15,7 @@ function New() {
                   <img src={images.news1} alt="Nike Kobe Shoes" className="img-fluid h-100" />
                
               </div>
-              <div className="col-md-5">
+              <div className="col-md-5 ">
               <h5 className="card-title newsheading">Buyer's </h5>
               <h5 className="card-title newsheading"> Guide: Nike </h5>
 
