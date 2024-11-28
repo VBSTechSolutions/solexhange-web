@@ -14,20 +14,40 @@
     
 
 }
+.newspargarpha_tow{
+    font-size: clamp(0.5rem, 4vw, 0.8rem);
+    font-weight: 900;
+    font-family: auto;
+    
+    
+
+}
 .news_btn{
     justify-content: space-around;
     align-items: center;
     position: relative;
-    right: 150px;
+    /* right: 150px; */
     z-index: 3;
+    top: 50px;
 }
-@media (max-width : 992px ) {
+@media (max-width : 768px ) {
     .news_btn{
         justify-content: space-around;
         align-items: center;
         position: relative;
-        right: 150px;
-        top: -30px;
+        right: 0px !important;
+        width: 50% !important;
+       
+        
+    }
+    .container-with{
+        max-width: 100% !important;
+    }
+}
+@media (max-width : 992px ) {
+    .news_btn{
+       top: -27px;
+       
         
     }
 }
@@ -36,7 +56,8 @@
         justify-content: space-around;
         align-items: center;
         position: static;
-      width: 65% !important;
+      
+        
       font-size: clamp(0.7rem, 4vw, 0.7rem);
     }
 }
@@ -60,4 +81,18 @@
     .new2-imge{
         max-width: 100%;
     }
+    .magrinen{
+        margin-top: 0px !important;
+        padding-left: 0px !important;
+        margin-left: 0px !important;
+      }
+}
+.btnines{
+    display: grid;
+    justify-content: center;
+}
+.girdidflex{
+    display: grid;
+    align-items: center;
+    padding-left: 20px;
 }

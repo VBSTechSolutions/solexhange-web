@@ -3,6 +3,9 @@ import Navbar from '../Componentes/Navbar/Navbar'
 import Iteam from '../Componentes/Iteam/Iteam'
 import New from '../Componentes/New/New'
 import Newtow from '../Componentes/New/Newtow'
+import Newsthree from '../Componentes/New/Newsthree'
+import Footer from '../Componentes/Footer/Footer'
+import Newsbanner from '../Componentes/New/Newsbanner'
 
 function Newspage() {
   return (
@@ -11,6 +14,9 @@ function Newspage() {
         <Iteam/>
         <New/>
         <Newtow/>
+        <Newsthree/>
+<Newsbanner/>        
+        <Footer/>
       
     </div>
   )
