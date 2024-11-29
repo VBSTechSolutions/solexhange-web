@@ -7,14 +7,14 @@ function Banner4() {
      
       <div class="row g-3">
         <div class="col-lg-6 heightcol d-flex">
-            <div className="ms-auto">
+            <div className="bannerhelp">
             <p class="helpheading  ">Welcom to the</p>
             <p class="helpheading ">Soleexhange Help Center</p>
             <p class="helpheadinges ">What can we help you with today?</p>
             <p className="d-flex">
-              <i className="fa-solid fa-magnifying-glass iconesearch pt-3 ms-3"></i>
+              <i className="fa-solid fa-magnifying-glass iconesearch pt-3 "></i>
               <input
-                class="form-control me-2 ps-5 seacrhelp"
+                class="form-control ps-5 seacrhelp"
                 type="search"
                 placeholder="Ask a question"
                 aria-label="Search"

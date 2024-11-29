@@ -27,5 +27,22 @@
     position: relative;
     
     left: 8%;
+    z-index: 1;
     color: gray;
+}
+.seacrhelp{
+    position:absolute;
+    width: 50%;
+}
+.bannerhelp{
+    margin-left: auto;
+}
+@media (max-width : 992px) {
+    .bannerhelp{
+        margin-left: 0px !important;
+    } 
+    .heightcol{
+        justify-content: center;
+    }
+    
 }

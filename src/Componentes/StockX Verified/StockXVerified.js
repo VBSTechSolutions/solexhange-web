@@ -4,9 +4,9 @@ import "./StockXVerified.css"; // Ensure this CSS file has the styling code
 function StockXVerified() {
   return (
     <div className="container my-5">
-      <div className="row">
+      <div className="row justify-content-center">
         {/* Card 1 */}
-        <div className="col-lg-4 col-md-6 mb-4">
+        <div className="col-lg-4 col-md-4 mb-4">
           <div className="card custom-card">
             <div className="p-3">
               <div className="icon d-flex  justify-content-between">
@@ -40,7 +40,7 @@ function StockXVerified() {
         </div>
 
         {/* Card 2 */}
-        <div className="col-lg-4 col-md-6 mb-4">
+        <div className="col-lg-4 col-md-4 mb-4">
           <div className="card custom-card">
             <div className="p-3">
               <div className="icon d-flex  justify-content-between">
@@ -75,7 +75,7 @@ function StockXVerified() {
         </div>
 
         {/* Card 3 */}
-        <div className="col-lg-4 col-md-6 mb-4">
+        <div className="col-lg-4 col-md-4 mb-4">
           <div className="card custom-card">
             <div className="p-3 ">
               <div className="icon d-flex     justify-content-between">

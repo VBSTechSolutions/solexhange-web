@@ -17,6 +17,7 @@ import about6 from '../Image/customer-service.png'
 import Circle from '../Image/Supreme-Bandana-Box-Logo-Hooded-Sweatshirt-Heather-Greyg-800x800.avif'
 import news1 from '../Image/pexels-adrian-dorobantu-989175-2300334.jpg'
 import news2 from '../Image/pexels-craytive-1478442.jpg'
+import news3 from '../Image/pexels-athul-adhu-186900-684152.jpg'
 
 
 export const images = {
@@ -39,6 +40,6 @@ export const images = {
     Circle,
     news1,
     news2,
-    
+    news3
     
 }

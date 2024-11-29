@@ -6,6 +6,8 @@ import Shoes5 from "../AboutImage/pexels-melvin-buezo-1253763-2529148.jpg";
 import Shoes6 from "../AboutImage/pexels-fsoerensen-2404959.jpg";
 import Shoes7 from "../AboutImage/pexels-craytive-1537671.jpg";
 import Shoes8 from "../AboutImage/pexels-felipepelaquim-1895019.jpg";
+import Shoes9 from "../AboutImage/pexels-jose-martin-segura-benites-1422456152-27503497.jpg";
+
 
 export const imager = {
   Shoes1,
@@ -16,4 +18,5 @@ export const imager = {
   Shoes6,
   Shoes7,
   Shoes8,
+  Shoes9,
 };

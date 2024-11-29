@@ -298,10 +298,11 @@ function Footer() {
         </div>
       ) : (
         <div className="any footer1">
-          <div className="sub-menu">
+          <div className="sub-menu p-3">
             <div>
-              <div className="pt-3 ps-2">
-                <h2>Soleexhange. Access the Now.</h2>
+            <h2 className="">Soleexhange. Access the Now.</h2>
+              <div className=" ">
+                
 
                 <div
                   href="#settings"
