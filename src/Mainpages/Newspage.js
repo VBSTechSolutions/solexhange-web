@@ -14,8 +14,9 @@ function Newspage() {
         <Iteam/>
         <New/>
         <Newtow/>
+        <Newsbanner/>  
         <Newsthree/>
-<Newsbanner/>        
+      
         <Footer/>
       
     </div>

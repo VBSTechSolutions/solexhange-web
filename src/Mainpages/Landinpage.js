@@ -10,19 +10,24 @@ import Footer from "../Componentes/Footer/Footer";
 import Cardpass from "../Componentes/Card/Cardpass";
 import StockXVerified from "../Componentes/StockX Verified/StockXVerified";
 import BrowseMoreBrands from "../Componentes/Browse MoreBrands/browseMoreBrands";
+import Newsbanner from "../Componentes/New/Newsbanner";
 
 function Landinpage() {
   return (
     <div>
       <Navbar />
       <Items />
+    
       <Banner />
+  
       {/* <Recently/> */}
       <Cardpass />
+    
         <Card />
     
       <Banner2 />
       <BrowseMoreBrands/>
+      <Newsbanner/>
       <StockXVerified/>
       <Footer />
     </div>

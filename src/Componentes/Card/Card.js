@@ -64,6 +64,8 @@ function Card(props) {
                 <div className="card-body">
                   <h6 className="card-title mt-1">{dats.attributes.name}</h6>
                   <h6 className="card-text mt-1">Lowest Ask</h6>
+                  <p><strong>Release Year:</strong> {dats.attributes.release_year}</p>
+
                   {dats.attributes.sizes && dats.attributes.sizes.length > 0 ? (
                     <h6 className="price">${dats.attributes.sizes[0].lowest_bid}</h6>
                   ) : (
