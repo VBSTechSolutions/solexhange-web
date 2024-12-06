@@ -15,7 +15,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 992); // Adjust threshold based on your design needs
+      setIsLargeScreen(window.innerWidth >= 992); 
     };
 
     window.addEventListener("resize", handleResize);
