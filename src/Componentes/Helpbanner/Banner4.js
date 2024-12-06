@@ -5,7 +5,7 @@ function Banner4() {
   return (
     <div className="container-fluid bg-dark text-white">
      
-      <div class="row g-3">
+      <div class="row py-5 ">
         <div class="col-lg-6 heightcol d-flex">
             <div className="bannerhelp">
             <p class="helpheading  ">Welcom to the</p>

@@ -7,50 +7,7 @@ function Login() {
   const renderForm = () => {
     if (toggle) {
       return (
-        <form className="mt-4">
-          <h4 className="">Log In</h4>
-          <div className="form-group">
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Email Address*"
-              required
-            />
-          </div>
-          <div className="form-group position-relative">
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Password*"
-              required
-            />
-            <span
-              className="position-absolute"
-              style={{ right: "10px", top: "10px", cursor: "pointer" }}
-            >
-              <img
-                src="https://img.icons8.com/ios-glyphs/20/000000/invisible.png"
-                alt="toggle visibility"
-              />
-            </span>
-          </div>
-          <button
-            type="submit"
-            className="btn btn-black btn-block"
-            style={{
-              backgroundColor: "#000",
-              color: "#fff",
-              borderRadius: "0",
-            }}
-          >
-            Log In
-          </button>
-        </form>
-      );
-    }
-
-    return (
-      <form className="mt-4">
+         <form className="mt-4">
         <h4 className="">Sign Up</h4>
         <div className="form-group">
           <input
@@ -127,6 +84,51 @@ function Login() {
           Sign Up
         </button>
       </form>
+      
+      );
+    }
+
+    return (
+     
+        <form className="mt-4">
+        <h4 className="">Log In</h4>
+        <div className="form-group">
+          <input
+            type="email"
+            className="form-control"
+            placeholder="Email Address*"
+            required
+          />
+        </div>
+        <div className="form-group position-relative">
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Password*"
+            required
+          />
+          <span
+            className="position-absolute"
+            style={{ right: "10px", top: "10px", cursor: "pointer" }}
+          >
+            <img
+              src="https://img.icons8.com/ios-glyphs/20/000000/invisible.png"
+              alt="toggle visibility"
+            />
+          </span>
+        </div>
+        <button
+          type="submit"
+          className="btn btn-black btn-block"
+          style={{
+            backgroundColor: "#000",
+            color: "#fff",
+            borderRadius: "0",
+          }}
+        >
+          Log In
+        </button>
+      </form>
     );
   };
 
@@ -139,7 +141,7 @@ function Login() {
             href="#"
             onClick={() => setToggle(false)}
           >
-            Sign Up
+            Log in
           </a>
         </li>
         <li className="nav-item">
@@ -148,7 +150,7 @@ function Login() {
             href="#"
             onClick={() => setToggle(true)}
           >
-            Log In
+            Sing Up
           </a>
         </li>
       </ul>

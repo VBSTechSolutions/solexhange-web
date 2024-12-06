@@ -3,35 +3,46 @@ import { useSelector } from "react-redux";
 import "../Card/Card.css";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
+import { useParams } from "react-router-dom";  // Import useParams
 
 function Cartadd() {
+  const { name } = useParams();  // Get the name from the route
   const [alldata, setAlldata] = useState([]);
-  const [rotationAngle, setRotationAngle] = useState(0); // State for controlling rotation angle
+  const [rotationAngle, setRotationAngle] = useState(0);
   const itemData = useSelector((state) => state.iteamPass || []);
 
   useEffect(() => {
-    // Store data in localStorage when itemData changes
     if (itemData.length > 0) {
       localStorage.setItem("iteamdata", JSON.stringify(itemData));
     }
 
-    // Retrieve data from localStorage
     const storedData = localStorage.getItem("iteamdata");
     if (storedData) {
       const parsedData = JSON.parse(storedData);
-      setAlldata(parsedData);
+      
+      // Filter the data based on the name passed in the route and ensure uniqueness based on 'name'
+      const filteredData = parsedData.filter((item, index, self) => {
+        return (
+          item.name === name && 
+          self.findIndex(i => i.name === item.name) === index
+        );
+      });
+      setAlldata(filteredData);
     }
-  }, [itemData]);
+  }, [itemData, name]);  // Depend on itemData and name
 
-  // Function to handle swipes (left or right) for rotation
   const handleSwipe = (direction) => {
     if (direction === "left") {
-      setRotationAngle((prev) => (prev + 36) % 360); // Rotate right
+      setRotationAngle((prev) => (prev + 36) % 360);
     } else if (direction === "right") {
-      setRotationAngle((prev) => (prev - 36 + 360) % 360); // Rotate left
+      setRotationAngle((prev) => (prev - 36 + 360) % 360);
     }
   };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const handleSliderChange = (e) => {
+    setCurrentIndex(Number(e.target.value)); // Update the state for the slider
+  };
   return (
     <div>
       <div className="colortext container">
@@ -56,7 +67,6 @@ function Cartadd() {
                       if (deltaX < -50) handleSwipe("left");
                     }}
                   >
-                    {/* Image with Vertical Rotation */}
                     <div className="img-container">
                       <img
                         id="myImg"
@@ -64,8 +74,14 @@ function Cartadd() {
                         src={item.img}
                         alt="..."
                         style={{
-                          transform: `rotateY(${rotationAngle}deg)`,
-                          transition: "transform 0.3s ease-in-out", // Smooth rotation
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "contain",
+                          opacity: currentIndex === index ? 1 : 0,
+                          // Smooth transition between images
                         }}
                       />
                     </div>
@@ -74,16 +90,11 @@ function Cartadd() {
                     <div className="border " style={{ borderRadius: "0.5rem" }}>
                       <div className="d-flex justify-content-between align-middle py-2 px-4">
                         <h6 className=" ">Size :</h6>
-                        <h6 className="">
-                          All <i class="fa-solid fa-angle-down"></i>
-                        </h6>
+                        <h6 className="">All <i className="fa-solid fa-angle-down"></i></h6>
                       </div>
                     </div>
-                    <div
-                      className="border p-4  mt-3"
-                      style={{ borderRadius: "0.5rem" }}
-                    >
-                      <div className="d-flex justify-content-between aligriteam ">
+                    <div className="border p-4 mt-3" style={{ borderRadius: "0.5rem" }}>
+                      <div className="d-flex justify-content-between aligriteam">
                         <div>
                           <h6 className="price mt-1">Buy Now for</h6>
                           <h6 className="price">${item.highest}</h6>
@@ -98,7 +109,7 @@ function Cartadd() {
                         <div className="col-lg-6">
                           <button
                             type="button"
-                            class="btn border border-1 mt-3 p-2"
+                            className="btn border border-1 mt-3 p-2"
                             style={{ width: "100%", borderRadius: "1rem" }}
                           >
                             Place Bid
@@ -107,10 +118,8 @@ function Cartadd() {
                         <div className="col-lg-6">
                           <button
                             type="button"
-                            class="btn border border-1 mt-3 p-2 btncolor"
-                            style={{
-                              width: "100%",
-                            }}
+                            className="btn border border-1 mt-3 p-2 btncolor"
+                            style={{ width: "100%" }}
                           >
                             Buy Now
                           </button>
@@ -119,13 +128,13 @@ function Cartadd() {
                       <div className="mt-3">
                         <hr />
                       </div>
-                      <div className="d-flex justify-content-between aligriteam ">
+                      <div className="d-flex justify-content-between aligriteam">
                         <div>
                           <span className=" mt-1 fs-3">Sale :</span>
                           <span className="price">${item.lowest_bid}</span>
                         </div>
                         <div>
-                          <h6 className="text-decoration-underline underlinees ">
+                          <h6 className="text-decoration-underline underlinees">
                             <b>View Market Data</b>
                           </h6>
                         </div>
@@ -139,7 +148,6 @@ function Cartadd() {
             <p>No items in cart</p>
           )}
 
-          {/* Range Slider to Control Vertical Rotation */}
           <div className="mt-3">
             <label>Rotation Angle: {rotationAngle}°</label>
             <input

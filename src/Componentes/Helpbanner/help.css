@@ -32,7 +32,7 @@
 }
 .seacrhelp{
     position:absolute;
-    width: 50%;
+    width: 50% !important;
 }
 .bannerhelp{
     margin-left: auto;

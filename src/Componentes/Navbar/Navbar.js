@@ -1,42 +1,18 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
-import { Link, NavLink } from "react-router-dom";
-
-import { images } from "../../Image/Allimage";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
+import { images } from "../../Image/Allimage";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpens, setIsOpens] = useState(false);
   const [openMenu, setOpenMenu] = useState(null); // State to track which menu is open
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [searchapi, setSearchApi] = useState("");
-  // const [filteredResults, setFilteredResults] = useState([]);
-  
+
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 992);
-
-  // const handleSearchChange = (event) => {
-  //   const query = event.target.value;  
-  //   if (query) {
-  //     const results = searchapi.filter((item) =>
-  //       item.name.toLowerCase().includes(query.toLowerCase())
-  //     );
-  //     setFilteredResults(results);
-  //   } else {
-  //     setFilteredResults([]);
-  //   }
-  // };
-  
-  // Update the screen size on resize
   const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
 
-  const handleSearchSubmit = (e) => {
-    e.preventDefault(); // Prevent form submission
-    if (searchQuery.trim()) {
-      navigate(`/search`, { state: { query: searchQuery } }); // Navigate with search query
-    }
-  };
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 992); // Adjust threshold based on your design needs
@@ -45,19 +21,6 @@ function Navbar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  useEffect(()=>{
-axios
-.get("https://sneakers-rough-frost-7777.fly.dev/search")
-.then((response)=>{
-  setSearchApi(response.data);
-  console.log("add a new data ", response);
-
-})
-
-.catch((error) => {
-  console.error("Error fetching data:", error);})
-
-  },[])
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -78,6 +41,14 @@ axios
   const toggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
+  const navigate = useNavigate();
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/sneaker-products?s=${encodeURIComponent(searchQuery)}`);
+    }
+  };
 
   return (
     <div>
@@ -91,14 +62,15 @@ axios
         <div className="search-container-custom">
           {/* Input Box */}
           <div className={`input-box-custom ${isOpens ? "open" : ""}`}>
-          <input
-        className="form-control ps-5"
-        type="search"
-        placeholder="Search for brand, color, etc."
-        aria-label="Search"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />            <span className="search-custom" onClick={handleSearchClick}>
+            <input
+              className="form-control ps-5"
+              type="search"
+              placeholder="Search for brand, color, etc."
+              aria-label="Search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <span className="search-custom" onClick={handleSearchClick}>
               <i className="fa-solid fa-magnifying-glass"></i>
             </span>
             {/* Close icon */}
@@ -241,19 +213,29 @@ axios
               id="navbarNav"
             >
               {/* Search Bar */}
-              <form className="d-flex mx-auto align-items-center fromwidth pe-3 ">
-                <i className="fa-solid fa-magnifying-glass position-absolute ms-3 text-secondary"></i>
-                <input
-                  className="form-control  ps-5"
-                  type="search"
-                  placeholder="Search for brand, color, etc."
-                  aria-label="Search"
-                />
-              </form>
+              <div className="d-flex w-100 pe-5
+               ">
+              
+                <form
+                  onSubmit={handleSearchSubmit}
+                  className="d-flex align-items-center w-100"
+                >
+                    <button type="submit" className="btn position-absolute ">
+                    <i className="fa-solid fa-magnifying-glass"></i>
+                </button>
+                  <input
+                    type="search"
+                    placeholder="Search for brand, color, etc."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="form-control top-search-input  ps-5"
+                  />
+                </form>
+              </div>
 
               {/* Navbar Links */}
               <ul className="navbar-nav ms-auto  gaps align-items-center">
-              <NavLink to="/News" className="text-decoration-none text-dark">
+                <NavLink to="/News" className="text-decoration-none text-dark">
                   <li>News</li>
                 </NavLink>
                 <NavLink className="text-decoration-none text-dark" to="/about">
@@ -262,32 +244,35 @@ axios
                 <NavLink to="/Help" className="text-decoration-none text-dark">
                   <li>Help</li>
                 </NavLink>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="#">
-                    Sell
-                  </NavLink>
-                </li>
+                <NavLink to="/Sell" className="text-decoration-none text-dark">
+                  <li>Sell</li>
+                </NavLink>
+
                 <li className="nav-item">
                   <NavLink className="nav-link" to="#">
                     <i className="fas fa-bell"></i>
                   </NavLink>
                 </li>
-                <NavLink to="/Login">  <li className="nav-item" >
-                  <button
-                    className="btn btn-signup text-nowrap" 
-                    style={{ backgroundColor: "#333", color: "#fff" }}
-                  >
-                    Login
-                  </button>
-                </li></NavLink>
-               <NavLink to="/SingUpFrom">  <li className="nav-item" >
-                  <button
-                    className="btn btn-signup text-nowrap" 
-                    style={{ backgroundColor: "#333", color: "#fff" }}
-                  >
-                    Sign Up
-                  </button>
-                </li></NavLink>
+                <NavLink to="/Login">
+                  <li className="nav-item">
+                    <button
+                      className="btn btn-signup text-nowrap px-3"
+                      style={{  color: "#black" , borderRadius :"1.2rem " ,  border: "1px solid black" }}
+                    >
+                      Login
+                    </button>
+                  </li>
+                </NavLink>
+                <NavLink to="/SingUpFrom">
+                  <li className="nav-item">
+                    <button
+                      className="btn btn-signup text-nowrap px-3"
+                      style={{ backgroundColor: "#333", color: "#fff" , borderRadius :"1.2rem" }}
+                    >
+                      Sign Up
+                    </button>
+                  </li>
+                </NavLink>
               </ul>
             </div>
           </div>
