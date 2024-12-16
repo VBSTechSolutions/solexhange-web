@@ -8,10 +8,10 @@ function Banner() {
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active p-3">
-            <img src={images.Banner1} className="d-block w-100 slider" alt="Slide 1" />
+           <div className=''> <img src={images.Banner1} className="d-block w-100  slider" alt="Slide 1" /></div>
           </div>
           <div className="carousel-item p-3">
-            <img src={images.Banner2} className="d-block w-100 slider" alt="Slide 2" />
+          <div className=''> <img src={images.Banner2} className="d-block w-100  slider" alt="Slide 2" /></div>
           </div>
           {/* <div className="carousel-item">
             <img src={images.Banner2} className="d-block w-100" alt="Slide 3" />

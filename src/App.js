@@ -10,6 +10,7 @@ import Search from './Componentes/Search/Search';
 import Newspage from './Mainpages/Newspage';
 import Sell from './Componentes/Sell/Sell';
 import SneakerProducts from './Componentes/SneakerProducts/SneakerProducts';
+import Alphbates from './Componentes/Alphbates/Alphbates';
 
 function App() {
   return (
@@ -26,9 +27,13 @@ function App() {
         <Route path="/News" element={<Newspage />} />
         <Route path="/Sell" element={<Sell />} />
         <Route path="/sneaker-products" element={<SneakerProducts />} />
+        
       </Routes>
+      <Alphbates/>
+
     
     </div>
+
     
   );
 }

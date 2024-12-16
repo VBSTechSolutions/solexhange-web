@@ -34,14 +34,13 @@ function Card(props) {
       lowest_bid: lowestBid,
     };
   
-    // Check if the item is already in Redux state or localStorage
     const isItemInRedux = itemData.some((item) => item.name === newItem.name);
   
     const storedData = localStorage.getItem("iteamdata");
     const parsedStoredData = storedData ? JSON.parse(storedData) : [];
     const isItemInLocalStorage = parsedStoredData.some((item) => item.name === newItem.name);
   
-    if (!isItemInRedux) {
+    if (!isItemInRedux) {  
       // Dispatch to Redux only if the item is not already in state
       dispatch(addData(newItem));
     }
