@@ -24,7 +24,7 @@ function Alphbates({ onLetterClick }) {
             onClick={() => onLetterClick(letter)} // Send the selected letter to the parent
             style={{
               fontWeight: "bold",
-              color: "blue",
+              color: "black",
               cursor: "pointer",
             }}
           >
@@ -33,7 +33,7 @@ function Alphbates({ onLetterClick }) {
         ))}
         {/* Add the # symbol */}
         <span onClick={() => onLetterClick("#")} style={{ cursor: "pointer" }}>
-          #
+          
         </span>
       </div>
     </div>

@@ -1,184 +1,215 @@
-.fromwidth{
-    width: -webkit-fill-available !important;
-}
-.gaps{
-  gap: 10px;
-  
-}
-.fa-times{
-    width: 30px;
-    height: 30px;
-}
-.chakra-icon{
-  
-    width: 90px;
-    height: 45px;
-    object-fit: contain;
-    color: green !important;
+/* General Reset and Common Utility Classes */
+.fromwidth {
+  width: -webkit-fill-available !important;
 }
 
-.navbar-toggler:focus{
-    box-shadow: none;
+.gaps {
+  gap: 16px;
 }
-.btn-login ,.btn-signup{
-    border-radius: 1.2rem;
+
+.main-container {
+  border-bottom: 1px solid gray;
 }
-.nav-link{
-    color: black !important;
+
+.nav-link {
+  color: black !important;
 }
-.form-control{
-    height: 45px;
-    border: 1px solid gray;
+
+.form-control {
+  height: 45px;
+  border: 1px solid gray;
 }
+
+/* Buttons */
+.btn-login, .btn-signup {
+  border-radius: 1.2rem;
+}
+
+.fa-times {
+  width: 30px;
+  height: 30px;
+}
+
+/* Navbar Custom Styles */
 .navbar-custom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 20px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  width: 100%;
+  border-bottom: 1px solid black;
+}
 
-  .btn-toggler-custom {
-    font-size: 24px;
-    cursor: pointer;
-  }
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 
-  .logo-custom {
-   width: 100px;
-   height: 90px;
-    
-  }
+.logo-custom {
+  width: 100px;
+  height: 90px;
+}
 
-  .sidebar-custom {
-    position: fixed;
-    top: 0;
-    left: -100%;
-  
-    height: 100%;
-    width: 100% !important;
-z-index: 3;
-    background-color: #fff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: left 0.3s ease;
-    padding: 20px;
-  }
-  
+#navbarNav {
+  display: flex !important;
+  gap: 66px;
+}
 
-  .sidebar-custom.open {
-    left: 0;
-  }
-  
+/* Sidebar */
+.sidebar-custom {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100% !important;
+  z-index: 3;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  padding: 20px;
+}
 
+.sidebar-custom.open {
+  left: 0;
+}
 
-  .close-btn-custom {
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 20px;
-  }
+.close-btn-custom {
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
 
-  .sidebar-custom ul {
-    list-style: none;
-  }
+.sidebar-custom ul {
+  list-style: none;
+}
 
-  .sidebar-custom ul li {
-    margin: 10px 0;
-  }
+.sidebar-custom ul li {
+  margin: 10px 0;
+}
 
-  .sidebar-custom ul li a {
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    font-weight: 500;
-  }
+.sidebar-custom ul li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+}
 
+/* Search Input Box */
+.input-box-custom {
+  position: relative;
+  width: 100%;
+  max-width: 60px;
+  height: 55px;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
 
+.input-box-custom.open {
+  max-width: 88%;
+}
 
-  .input-box-custom {
-    position: relative;
-    width: 100%;
-    max-width: 60px;
-    height: 55px;
-    margin: 0 50px;
-    background-color: #fff;
-    border-radius: 6px;
-    transition: all 0.5s ease-in-out;
-  }
+.input-box-custom input {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  color: #333;
+  padding: 0 15px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+}
 
-  .input-box-custom.open {
-    max-width: 70%;
-  }
+.input-box-custom.open input {
+  padding: 0 15px 0 65px;
+}
 
-  .input-box-custom input {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    color: #333;
-    padding: 0 15px;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-    transition: all 0.5s ease-in-out;
-  }
+.input-box-custom .search-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-  .input-box-custom.open input {
-    padding: 0 15px 0 65px;
-  }
+.input-box-custom.open .search-custom {
+  border-radius: 6px 0 0 6px;
+}
 
-  .input-box-custom .search-custom {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-  }
+.search-custom .search-icon {
+  font-size: 30px;
+  color: #1C1C1C;
+}
 
-  .input-box-custom.open .search-custom {
-    border-radius: 6px 0 0 6px;
-  }
+.input-box-custom .close-icon-custom {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  font-size: 30px;
+  color: #1C1C1C;
+  padding: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+}
 
-  .search-custom .search-icon {
-    font-size: 30px;
-    color: #1c1c1c;
-  }
+.input-box-custom.open .close-icon-custom {
+  transform: translateY(-50%) rotate(180deg);
+  pointer-events: auto;
+  opacity: 1;
+}
 
-  .input-box-custom .close-icon-custom {
-    position: absolute;
-    top: 50%;
-    right: -45px;
-    font-size: 30px;
-    color: #1c1c1c;
-    padding: 5px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    pointer-events: none;
-    opacity: 0;
-  }
+/* Top Search Container */
+.top-search-container {
+  width: 60%;
+}
 
-  .input-box-custom.open .close-icon-custom {
-    transform: translateY(-50%) rotate(180deg);
-    pointer-events: auto;
-    opacity: 1;
+/* Form Details */
+.form-details {
+  width: 50%;
+  margin-left: 60px;
+}
+
+/* Chakra Icon */
+.chakra-icon {
+  width: 90px;
+  height: 45px;
+  object-fit: contain;
+  color: green !important;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 992px) {
+  .navbar-custom {
+    display: none;
   }
-  @media  (min-width : 992px) {
-    .navbar-custom{
-        display: none;
-    }
-    
+  .dnone{
+    display: none;
   }
-  .top-search-container{
-    width: 60%;
+}
+@media (max-width: 992px) {
+ 
+  .dnone{
+    display: none !important;
   }
+}
+
+/* .open{
+  width: 100%!important;
+} */
+ /* .search-container-custom{
+  width: -webkit-fill-available;
+ } */

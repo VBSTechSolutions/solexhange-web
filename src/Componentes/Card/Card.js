@@ -5,12 +5,10 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { addData } from "../Reducer/reducer";
 import { NavLink } from "react-router-dom";
-
 function Card(props) {
   const [cardsData, setCardsData] = useState([]);
   const dispatch = useDispatch();
   const itemData = useSelector((state) => state.iteamPass || []);
-
   useEffect(() => {
     axios
       .get("https://sneakers-rough-frost-7777.fly.dev/products")
@@ -21,38 +19,34 @@ function Card(props) {
         console.error("Error fetching data:", error);
       });
   }, []);
-
   const handleCardClick = (dats) => {
     const sizeData = dats.attributes.sizes && dats.attributes.sizes[0];
     const lowestBid = sizeData ? sizeData.lowest_bid : null;
     const highestBid = sizeData ? sizeData.highest_bid : null;
-  
     const newItem = {
       img: dats.attributes.image.url || images.Shoes[0],
       name: dats.attributes.name,
       highest: highestBid,
       lowest_bid: lowestBid,
+      photo: dats?.attributes?.photos || "No filename found", // Safely access the first photo's filename
     };
-  
+    // Logging the filename of the photo with context
+    console.log("Extracted photo filename:", newItem.photo);
+    // Check if the item is already in Redux state or localStorage
     const isItemInRedux = itemData.some((item) => item.name === newItem.name);
-  
     const storedData = localStorage.getItem("iteamdata");
     const parsedStoredData = storedData ? JSON.parse(storedData) : [];
     const isItemInLocalStorage = parsedStoredData.some((item) => item.name === newItem.name);
-  
-    if (!isItemInRedux) {  
+    if (!isItemInRedux) {
       // Dispatch to Redux only if the item is not already in state
       dispatch(addData(newItem));
     }
-  
     if (!isItemInLocalStorage) {
       // Save to localStorage only if the item is not already present
       const updatedLocalStorageData = [...parsedStoredData, newItem];
       localStorage.setItem("iteamdata", JSON.stringify(updatedLocalStorageData));
     }
   };
-  
-
   return (
     <div className="container">
       <h5>
@@ -64,7 +58,6 @@ function Card(props) {
             const sizeData = dats.attributes.sizes && dats.attributes.sizes[0];
             const lowestBid = sizeData ? sizeData.lowest_bid : "N/A";
             const highestBid = sizeData ? sizeData.highest_bid : "N/A";
-
             return (
               <div className="col-md-2" key={index}>
                 <NavLink
@@ -103,5 +96,6 @@ function Card(props) {
     </div>
   );
 }
-
 export default Card;
+
+

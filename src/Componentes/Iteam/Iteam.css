@@ -42,7 +42,7 @@
 .scroll-container .dropdown-menu {
   display: none;
   position: absolute;
-  margin-top: 2.2rem;
+  margin-top: 0.2rem;
 
   padding: 8px 0;
   background-color: #fff;
@@ -105,3 +105,7 @@
   }
 }
 
+.higher{
+  padding-top: 7px;
+  height: 42px;
+}

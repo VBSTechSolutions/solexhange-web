@@ -3,45 +3,41 @@ import { useSelector } from "react-redux";
 import "../Card/Card.css";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
-import { useParams } from "react-router-dom";  // Import useParams
-
+import { useParams } from "react-router-dom";
 function Cartadd() {
-  const { name } = useParams();  // Get the name from the route
+  const { name } = useParams();
   const [alldata, setAlldata] = useState([]);
   const [rotationAngle, setRotationAngle] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [frameNumber, setFrameNumber] = useState(1); // Manage selected frame via state
   const itemData = useSelector((state) => state.iteamPass || []);
-
   useEffect(() => {
     if (itemData.length > 0) {
       localStorage.setItem("iteamdata", JSON.stringify(itemData));
     }
-
     const storedData = localStorage.getItem("iteamdata");
     if (storedData) {
       const parsedData = JSON.parse(storedData);
-      
-      // Filter the data based on the name passed in the route and ensure uniqueness based on 'name'
       const filteredData = parsedData.filter((item, index, self) => {
         return (
-          item.name === name && 
-          self.findIndex(i => i.name === item.name) === index
+          item.name === name &&
+          self.findIndex((i) => i.name === item.name) === index
         );
       });
       setAlldata(filteredData);
     }
-  }, [itemData, name]);  // Depend on itemData and name
-
-  const handleSwipe = (direction) => {
-    if (direction === "left") {
-      setRotationAngle((prev) => (prev + 36) % 360);
-    } else if (direction === "right") {
-      setRotationAngle((prev) => (prev - 36 + 360) % 360);
-    }
+  }, [itemData, name]);
+  // Handling the input event for range-slider (no need for document manipulation)
+  const handleRangeChange = (event) => {
+    const newFrameNumber = event.target.value;
+    setFrameNumber(newFrameNumber);
   };
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleSliderChange = (e) => {
-    setCurrentIndex(Number(e.target.value)); // Update the state for the slider
+  const getCurrentImageUrl = () => {
+    if (alldata.length > 0 && alldata[0].photo) {
+      const selectedPhoto = alldata[0].photo[frameNumber - 1];
+      return selectedPhoto ? selectedPhoto.url : "";
+    }
+    return "";
   };
   return (
     <div>
@@ -55,23 +51,13 @@ function Cartadd() {
               <div key={index}>
                 <h6 className="card-title-addcart mt-1">{item.name}</h6>
                 <div className="row">
-                  <div
-                    className="col-lg-6 position-relative"
-                    onTouchStart={(e) =>
-                      (this.touchStartX = e.changedTouches[0].clientX)
-                    }
-                    onTouchEnd={(e) => {
-                      const deltaX =
-                        e.changedTouches[0].clientX - this.touchStartX;
-                      if (deltaX > 50) handleSwipe("right");
-                      if (deltaX < -50) handleSwipe("left");
-                    }}
-                  >
+                  <div className="col-lg-6 position-relative">
                     <div className="img-container">
+                      {/* Image URL is dynamically set using state */}
                       <img
                         id="myImg"
                         className="img-card"
-                        src={item.img}
+                        src={getCurrentImageUrl()} // Use state to dynamically update
                         alt="..."
                         style={{
                           position: "absolute",
@@ -80,20 +66,24 @@ function Cartadd() {
                           width: "100%",
                           height: "100%",
                           objectFit: "contain",
-                          opacity: currentIndex === index ? 1 : 0,
-                          // Smooth transition between images
                         }}
                       />
                     </div>
                   </div>
                   <div className="col-lg-6 p-5">
-                    <div className="border " style={{ borderRadius: "0.5rem" }}>
+                    <div
+                      className="border "
+                      style={{ borderRadius: "0.5rem" }}
+                    >
                       <div className="d-flex justify-content-between align-middle py-2 px-4">
-                        <h6 className=" ">Size :</h6>
+                        <h6 className="">Size :</h6>
                         <h6 className="">All <i className="fa-solid fa-angle-down"></i></h6>
                       </div>
                     </div>
-                    <div className="border p-4 mt-3" style={{ borderRadius: "0.5rem" }}>
+                    <div
+                      className="border p-4 mt-3"
+                      style={{ borderRadius: "0.5rem" }}
+                    >
                       <div className="d-flex justify-content-between aligriteam">
                         <div>
                           <h6 className="price mt-1">Buy Now for</h6>
@@ -147,15 +137,16 @@ function Cartadd() {
           ) : (
             <p>No items in cart</p>
           )}
-
           <div className="mt-3">
-            <label>Rotation Angle: {rotationAngle}°</label>
+            <label>Choose Image:</label>
+            {/* Range input is now directly handled in the onChange */}
             <input
+              id="range-input"
               type="range"
-              min="0"
-              max="360"
-              value={rotationAngle}
-              onChange={(e) => setRotationAngle(Number(e.target.value))}
+              min="1"
+              max="36"
+              value={frameNumber}
+              onChange={handleRangeChange} // Update state on range change
             />
           </div>
         </div>
@@ -185,5 +176,4 @@ function Cartadd() {
     </div>
   );
 }
-
 export default Cartadd;
