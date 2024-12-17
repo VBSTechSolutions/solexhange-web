@@ -32,6 +32,10 @@ function Navbar() {
     if (navbar) {
       navbar.style.width = '100%'; // Align content to the left
     }
+    const searchContainerElement = document.querySelector('.search-container-custom');
+    if (searchContainerElement) {
+      searchContainerElement.style.width = "-webkit-fill-available"; // Align content to the left
+    }
   };
   const handleCloseClick = () => {
     setIsOpens(false); // Close the search input
