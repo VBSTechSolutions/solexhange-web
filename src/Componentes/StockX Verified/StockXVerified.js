@@ -25,9 +25,9 @@ function StockXVerified() {
                   ></path>
                 </svg>
                 <div className="Soleexhange">
-                  <h5 className="card-title">Soleexhange Verified</h5>
+                  <h5 className="card-title">SoleXchange Verified</h5>
                   <p className="Soleexhange-text">
-                    Soleexhange Verified is our own designation means we
+                  SoleXchange Verified is our own designation means we
                     inspect every item, every time.
                   </p>
                   <a href="#" className="learn-more">

@@ -7,12 +7,12 @@ function Navbar() {
   const [isOpens, setIsOpens] = useState(false);
   const [openMenu, setOpenMenu] = useState(null); // State to track which menu is open
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 980);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 992);
   const [searchQuery, setSearchQuery] = useState("");
   const [hideLogo, setHideLogo] = useState(false); // State to manage logo visibility
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 980); // Adjust threshold based on your design needs
+      setIsLargeScreen(window.innerWidth >= 992); // Adjust threshold based on your design needs
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -27,14 +27,10 @@ function Navbar() {
     const searchContainer = document.querySelector('.search-container-custom');
     const navbar = document.querySelector('.navbar-custom');
     if (searchContainer) {
-      searchContainer.style.width = ''; // Expand to 100%
+      searchContainer.style.width = '100%'; // Expand to 100%
     }
     if (navbar) {
-      navbar.style.width = '100%'; // Align content to the left
-    }
-    const searchContainerElement = document.querySelector('.search-container-custom');
-    if (searchContainerElement) {
-      searchContainerElement.style.width = "-webkit-fill-available"; // Align content to the left
+      navbar.style.justifyContent = 'flex-start'; // Align content to the left
     }
   };
   const handleCloseClick = () => {
@@ -44,14 +40,14 @@ function Navbar() {
     const searchContainer = document.querySelector('.search-container-custom');
     const navbar = document.querySelector('.navbar-custom');
     if (searchContainer) {
-      searchContainer.style.width = ''; // Reset width
+      searchContainer.style.width = '';
     }
     if (navbar) {
-      navbar.style.justifyContent = ''; // Reset alignment
+      navbar.style.justifyContent = '';
     }
   };
   const toggleSubMenu = (index) => {
-    setOpenMenu(openMenu === index ? null : index); // Toggle open/close of submenus
+    setOpenMenu(openMenu === index ? null : index);
   };
   const toggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
@@ -65,8 +61,7 @@ function Navbar() {
   };
  const navbar = document.getElementsByClassName('navbar-custom');
   return (
-    <div className="container-fluid">
-      {/* Navbar */}
+    <div className="main-container">
       <div className={`navbar-custom ${isLargeScreen ? "large-screen" : ""}`}>
         <div className="btn-toggler-custom" onClick={toggleSidebar}>
           <i className="fa fa-bars"></i>
@@ -153,7 +148,7 @@ function Navbar() {
       {/* Navbar for large screens */}
       {isLargeScreen && (
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
-          <div className="container-fluid pe-5 pt-3 pb-3 dnone">
+          <div className="container-fluid pe-5 pt-3 pb-3">
             <NavLink className="navbar-brand" to="/">
               <img src={images.logo} className="chakra-icon" alt="Logo" />
             </NavLink>
@@ -162,7 +157,7 @@ function Navbar() {
               type="button"
               onClick={toggleNavbar}
               data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" 
+              data-bs-target="#navbarNav"
               aria-controls="navbarNav"
               aria-expanded={isNavbarOpen ? "true" : "false"}
               aria-label="Toggle navigation"
@@ -232,8 +227,3 @@ function Navbar() {
   );
 }
 export default Navbar;
-
-
-
-
-

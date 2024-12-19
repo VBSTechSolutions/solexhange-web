@@ -39,7 +39,7 @@ function Footer() {
       {/* Conditionally render based on screen size */}
       {isLargeScreen ? (
         <div className="container-xl mt-4 footer2">
-          <h2 className="pt-5">Soleexhange. Access the Now.</h2>
+          <h2 className="pt-5">SoleXchange. Access the Now.</h2>
           <div className="row py-4 ">
             <div className="col-lg-2 col-md-2">
               <h6>About</h6>
@@ -50,7 +50,7 @@ function Footer() {
                 <li className="text-decoration-none line-gap">Company</li>
                 <li className="text-decoration-none line-gap">Careers</li>
                 <li className="text-decoration-none line-gap">
-                  CSoleexhange Reviews
+                SoleXchange Reviews
                 </li>
                 <li className="text-decoration-none line-gap">
                   CGive $10, Get $10
@@ -339,7 +339,7 @@ function Footer() {
         <div className="any footer1">
           <div className="sub-menu p-3">
             <div>
-              <h2 className="">Soleexhange. Access the Now.</h2>
+              <h2 className="">SoleXchange. Access the Now.</h2>
               <div className=" ">
                 <div
                   href="#settings"

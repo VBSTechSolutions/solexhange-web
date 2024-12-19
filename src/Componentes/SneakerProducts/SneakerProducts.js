@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import Iteam from "../Iteam/Iteam";
+import "./SneakerProducts.css"
 
 function SneakerProducts() {
   const [products, setProducts] = useState([]);
@@ -122,41 +123,41 @@ function SneakerProducts() {
             <p>Search Results for: "{searchQuery}"</p>
             <div>
               <div>
-                <div className="row">
-                  {filteredProducts.length > 0 ? (
-                    filteredProducts.map((product) => (
-                      <div className="col-md-4" key={product.id}>
-                        <img
-                          src={product.attributes?.image?.url || "placeholder.jpg"}
-                          alt={product.attributes?.name || "Product Image"}
-                          style={{
-                            width: "100%",
-                            objectFit: "cover",
-                          }}
-                        />
-                        <h6>
-                          <strong>{product.attributes?.name}</strong>
-                        </h6>
-                        <p className="m-0">
-                          <strong>Brand:</strong> {product.attributes?.brand}
-                        </p>
-                        <p className="m-0">
-                          <strong>City:</strong> {product.attributes?.city}
-                        </p>
-                        <p className="m-0">
-                          <strong>Colorway:</strong>{" "}
-                          {product.attributes?.colorway}
-                        </p>
-                        <p className="m-0">
-                          <strong>Release Year:</strong>{" "}
-                          {product.attributes?.release_year}
-                        </p>
-                      </div>
-                    ))
-                  ) : (
-                    <p>No products match your search criteria.</p>
-                  )}
-                </div>
+              <div className="row">
+    {filteredProducts.length > 0 ? (
+      filteredProducts.map((product) => {
+        const sizeData = product.attributes.sizes && product.attributes.sizes[0]; // Access the first element
+        const lowestBid = sizeData ? sizeData.lowest_bid : "N/A";
+
+        return (
+          <div className="col-md-3" key={product.id}>
+            <div className="d-flex justify-content-end pe-2">
+              <i className="fa-regular fa-heart pb-0"></i>
+            </div>
+            <div className="d-flex justify-content-center">
+              <img
+                className="ProductImage"
+                src={product.attributes?.image?.url || "placeholder.jpg"}
+                alt={product.attributes?.name || "Product Image"}
+              />
+            </div>
+            <p className="m-0 Sportswear">
+              {product.attributes?.brand} Sportswear Tech Fleece Zip
+              Windrunner Reflective Full
+            </p>
+            <h6 className="LowestAsk">Lowest Ask</h6>
+            <p className="m-0">
+              <strong>
+                <i className="fa-solid fa-dollar-sign"></i> {lowestBid}
+              </strong>
+            </p>
+          </div>
+        );
+      })
+    ) : (
+      <p>No products match your search criteria.</p>
+    )}
+  </div>
               </div>
             </div>
           </div>

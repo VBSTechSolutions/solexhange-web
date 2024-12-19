@@ -4,12 +4,12 @@ import "../Card/Card.css";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 import { useParams } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 function Cartadd() {
   const { name } = useParams();
   const [alldata, setAlldata] = useState([]);
-  const [rotationAngle, setRotationAngle] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [frameNumber, setFrameNumber] = useState(1); // Manage selected frame via state
+  const [frameNumber, setFrameNumber] = useState(1);
+  const [imageWidth, setImageWidth] = useState(0);
   const itemData = useSelector((state) => state.iteamPass || []);
   useEffect(() => {
     if (itemData.length > 0) {
@@ -27,9 +27,8 @@ function Cartadd() {
       setAlldata(filteredData);
     }
   }, [itemData, name]);
-  // Handling the input event for range-slider (no need for document manipulation)
   const handleRangeChange = (event) => {
-    const newFrameNumber = event.target.value;
+    const newFrameNumber = parseInt(event.target.value, 10);
     setFrameNumber(newFrameNumber);
   };
   const getCurrentImageUrl = () => {
@@ -39,8 +38,20 @@ function Cartadd() {
     }
     return "";
   };
+  const handleMouseMove = (event) => {
+    if (!imageWidth) return; // Prevent calculations before image width is set
+    const rect = event.target.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left; // Mouse position relative to the image
+    const newFrameNumber = Math.ceil((mouseX / imageWidth) * 36); // Calculate frame number (1-36)
+    setFrameNumber(newFrameNumber > 36 ? 36 : newFrameNumber); // Clamp value to 36
+  };
+  const handleImageLoad = (event) => {
+    // Get the width of the image for proper calculations
+    setImageWidth(event.target.offsetWidth);
+  };
   return (
     <div>
+    <Navbar/>
       <div className="colortext container">
         <h5 className="ms-3">
           Recently Viewed <i className="fa-regular fa-circle-question"></i>
@@ -53,11 +64,10 @@ function Cartadd() {
                 <div className="row">
                   <div className="col-lg-6 position-relative">
                     <div className="img-container">
-                      {/* Image URL is dynamically set using state */}
                       <img
                         id="myImg"
                         className="img-card"
-                        src={getCurrentImageUrl()} // Use state to dynamically update
+                        src={getCurrentImageUrl()}
                         alt="..."
                         style={{
                           position: "absolute",
@@ -66,18 +76,24 @@ function Cartadd() {
                           width: "100%",
                           height: "100%",
                           objectFit: "contain",
+                          cursor: "e-resize", // Change cursor style
+                          transition: "transform 0.2s", // Smooth rotation effect
                         }}
+                        onLoad={handleImageLoad}
+                        onMouseMove={handleMouseMove} // Rotate on mouse move
                       />
                     </div>
                   </div>
                   <div className="col-lg-6 p-5">
                     <div
-                      className="border "
+                      className="border"
                       style={{ borderRadius: "0.5rem" }}
                     >
                       <div className="d-flex justify-content-between align-middle py-2 px-4">
                         <h6 className="">Size :</h6>
-                        <h6 className="">All <i className="fa-solid fa-angle-down"></i></h6>
+                        <h6 className="">
+                          All <i className="fa-solid fa-angle-down"></i>
+                        </h6>
                       </div>
                     </div>
                     <div
@@ -95,7 +111,7 @@ function Cartadd() {
                           </h6>
                         </div>
                       </div>
-                      <div className=" row">
+                      <div className="row">
                         <div className="col-lg-6">
                           <button
                             type="button"
@@ -120,7 +136,7 @@ function Cartadd() {
                       </div>
                       <div className="d-flex justify-content-between aligriteam">
                         <div>
-                          <span className=" mt-1 fs-3">Sale :</span>
+                          <span className="mt-1 fs-3">Sale :</span>
                           <span className="price">${item.lowest_bid}</span>
                         </div>
                         <div>
@@ -139,14 +155,13 @@ function Cartadd() {
           )}
           <div className="mt-3">
             <label>Choose Image:</label>
-            {/* Range input is now directly handled in the onChange */}
             <input
               id="range-input"
               type="range"
               min="1"
               max="36"
               value={frameNumber}
-              onChange={handleRangeChange} // Update state on range change
+              onChange={handleRangeChange}
             />
           </div>
         </div>
