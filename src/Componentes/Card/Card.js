@@ -90,7 +90,7 @@ function Card(props) {
             );
           })
         ) : (
-          <p>Loading...</p>
+          <p></p>
         )}
       </div>
     </div>

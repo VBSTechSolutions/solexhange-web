@@ -24,26 +24,26 @@ function Navbar() {
     setIsOpens(true); // Open the search input
     setHideLogo(true); // Hide the logo
     // Adjust styles dynamically
-    const searchContainer = document.querySelector('.search-container-custom');
-    const navbar = document.querySelector('.navbar-custom');
+    const searchContainer = document.querySelector(".search-container-custom");
+    const navbar = document.querySelector(".navbar-custom");
     if (searchContainer) {
-      searchContainer.style.width = '100%'; // Expand to 100%
+      searchContainer.style.width = "100%"; // Expand to 100%
     }
     if (navbar) {
-      navbar.style.justifyContent = 'flex-start'; // Align content to the left
+      navbar.style.justifyContent = "flex-start"; // Align content to the left
     }
   };
   const handleCloseClick = () => {
     setIsOpens(false); // Close the search input
     setHideLogo(false); // Show the logo
     // Reset styles dynamically
-    const searchContainer = document.querySelector('.search-container-custom');
-    const navbar = document.querySelector('.navbar-custom');
+    const searchContainer = document.querySelector(".search-container-custom");
+    const navbar = document.querySelector(".navbar-custom");
     if (searchContainer) {
-      searchContainer.style.width = '';
+      searchContainer.style.width = "";
     }
     if (navbar) {
-      navbar.style.justifyContent = '';
+      navbar.style.justifyContent = "";
     }
   };
   const toggleSubMenu = (index) => {
@@ -59,7 +59,7 @@ function Navbar() {
       navigate(`/sneaker-products?s=${encodeURIComponent(searchQuery)}`);
     }
   };
- const navbar = document.getElementsByClassName('navbar-custom');
+  const navbar = document.getElementsByClassName("navbar-custom");
   return (
     <div className="main-container">
       <div className={`navbar-custom ${isLargeScreen ? "large-screen" : ""}`}>
@@ -68,7 +68,11 @@ function Navbar() {
         </div>
         {!hideLogo && (
           <NavLink to="/">
-            <img src={images.logo} className="chakra-icon logo-custom" alt="Logo" />
+            <img
+              src={images.logo}
+              className="chakra-icon logo-custom"
+              alt="Logo"
+            />
           </NavLink>
         )}
         <div className="search-container-custom">
@@ -84,7 +88,10 @@ function Navbar() {
             <span className="search-custom" onClick={handleSearchClick}>
               <i className="fa-solid fa-magnifying-glass"></i>
             </span>
-            <i className="fa-solid fa-xmark close-icon-custom" onClick={handleCloseClick}></i>
+            <i
+              className="fa-solid fa-xmark close-icon-custom"
+              onClick={handleCloseClick}
+            ></i>
           </div>
         </div>
       </div>
@@ -99,7 +106,12 @@ function Navbar() {
           </li>
           <li>
             <NavLink to="#" onClick={() => toggleSubMenu(0)}>
-              Brands <i className={openMenu === 0 ? "fa fa-chevron-down" : "fa fa-chevron-right"}></i>
+              Brands{" "}
+              <i
+                className={
+                  openMenu === 0 ? "fa fa-chevron-down" : "fa fa-chevron-right"
+                }
+              ></i>
             </NavLink>
             {openMenu === 0 && (
               <ul>
@@ -117,7 +129,12 @@ function Navbar() {
           </li>
           <li>
             <NavLink to="#" onClick={() => toggleSubMenu(1)}>
-              Sneakers <i className={openMenu === 1 ? "fa fa-chevron-down" : "fa fa-chevron-right"}></i>
+              Sneakers{" "}
+              <i
+                className={
+                  openMenu === 1 ? "fa fa-chevron-down" : "fa fa-chevron-right"
+                }
+              ></i>
             </NavLink>
             {openMenu === 1 && (
               <ul>
@@ -162,25 +179,34 @@ function Navbar() {
               aria-expanded={isNavbarOpen ? "true" : "false"}
               aria-label="Toggle navigation"
             >
-              {isNavbarOpen ? <i className="fas fa-times fs-2"></i> : <span className="navbar-toggler-icon"></span>}
+              {isNavbarOpen ? (
+                <i className="fas fa-times fs-2"></i>
+              ) : (
+                <span className="navbar-toggler-icon"></span>
+              )}
             </button>
-            <div className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`} id="navbarNav">
-            <form
-                  onSubmit={handleSearchSubmit}
-                  className="d-flex align-items-center form-details"
-                >
-                    <button type="submit" className="btn position-absolute ">
-                    <i className="fa-solid fa-magnifying-glass"></i>
+            <div
+              className={`collapse navbar-collapse ${
+                isNavbarOpen ? "show" : ""
+              }`}
+              id="navbarNav"
+            >
+              <form
+                onSubmit={handleSearchSubmit}
+                className="d-flex align-items-center form-details"
+              >
+                <button type="submit" className="btn position-absolute ">
+                  <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
-                  <input
-                    type="search"
-                    placeholder="Search for brand, color, etc."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="form-control top-search-input  ps-5"
-                  />
-                </form>
-                <ul className="navbar-nav   gaps align-items-center">
+                <input
+                  type="search"
+                  placeholder="Search for brand, color, etc."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="form-control top-search-input  ps-5"
+                />
+              </form>
+              <ul className="navbar-nav   gaps align-items-center">
                 <NavLink to="/News" className="text-decoration-none text-dark">
                   <li>News</li>
                 </NavLink>
@@ -218,7 +244,22 @@ function Navbar() {
                     </button>
                   </li>
                 </NavLink>
+               
               </ul>
+              {/* <NavLink to="/verify-otp">
+                  <li className="nav-item" style={{listStyle : "none"}}>
+                    <button
+                      className="btn btn-signup text-nowrap "
+                      style={{ borderRadius: "1.2rem" }}
+                    >
+                      <img
+                        src={images.logout}
+                        alt="Logout"
+                        style={{ width: "30px", height: "30px" }}
+                      />
+                    </button>
+                  </li>
+                </NavLink> */}
             </div>
           </div>
         </nav>

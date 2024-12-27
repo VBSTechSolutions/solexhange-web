@@ -49,7 +49,7 @@ function SneakerProducts() {
       .includes(searchQuery.toLowerCase())
   );
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p></p>;
   if (error) return <p>Error: {error}</p>;
 
   return (

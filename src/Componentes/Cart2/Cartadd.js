@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-function Cartadd() {
+function Cartadd() { 
   const { name } = useParams();
   const [alldata, setAlldata] = useState([]);
   const [frameNumber, setFrameNumber] = useState(1);
