@@ -10,7 +10,7 @@ const OTPVerification = ({ onAuthenticate }) => {
   const [success, setSuccess] = useState("");
   const [step, setStep] = useState(1);
 
-  const navigate = useNavigate();
+  const  navigate = useNavigate();
 
   const handlePhoneChange = (event) => {
     setPhoneNumber(event.target.value);
@@ -55,7 +55,7 @@ const OTPVerification = ({ onAuthenticate }) => {
         "https://sneakers-rough-frost-7777.fly.dev/verify_otp",
         { phone_number: phoneNumber, otp_code: otp },
         { headers: { "Content-Type": "application/json" } }
-      );
+      ); 
 
       console.log("Response:", response.data);
       setSuccess("OTP Verified Successfully!");
@@ -73,6 +73,7 @@ const OTPVerification = ({ onAuthenticate }) => {
       setLoading(false);
     }
   };
+
 
   return (
     <div>
